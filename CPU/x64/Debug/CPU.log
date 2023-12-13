@@ -1,0 +1,6 @@
+﻿  alu.cpp
+  cpu.cpp
+  flags.cpp
+  main.cpp
+  Generating Code...
+  CPU.vcxproj -> D:\Visual Studio\CPU\x64\Debug\CPU.exe
