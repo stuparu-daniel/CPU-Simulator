@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/CPU/libs/**",
+                "${workspaceFolder}/CPU/libs/Catch2/**",
+                "${workspaceFolder}/CPU/libs/systemc-2.3.3/**",
+                "${workspaceFolder}/CPU/libs/systemc_installed/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

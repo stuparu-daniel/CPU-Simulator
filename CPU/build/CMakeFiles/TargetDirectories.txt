@@ -1,0 +1,2 @@
+/mnt/d/ProiecteTeme/UPT_CURSURI/Anul_3/FIC/Proiect/CPU-Simulator/CPU/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/ProiecteTeme/UPT_CURSURI/Anul_3/FIC/Proiect/CPU-Simulator/CPU/build/CMakeFiles/edit_cache.dir

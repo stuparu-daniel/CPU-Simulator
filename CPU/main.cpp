@@ -1,5 +1,13 @@
 #include "cpu.h"
 #include <iostream>
+#include <systemc.h>
+
+int sc_main(int argc, char* argv[]) {
+
+    sc_start();
+
+    return 0;
+}
 
 int main() {
     std::shared_ptr<Flags> flags = std::make_shared<Flags>();
