@@ -4,7 +4,7 @@
 */
 /**************************************************************************/
 #define CATCH_CONFIG_RUNNER
-#include <module_testing.h>
+#include <shared/module_testing.h>
 
 
 /*

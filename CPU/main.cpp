@@ -1,4 +1,4 @@
-#include "cpu.h"
+#include "modules/cpu/cpu.h"
 #include <iostream>
 #include <systemc.h>
 

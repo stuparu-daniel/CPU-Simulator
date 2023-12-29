@@ -12,7 +12,7 @@
             "cwd": "${workspaceFolder}/",
             "environment": [ {
                 "name": "LD_LIBRARY_PATH",
-                "value": "/home/solo/Proiect_FIC/CPU-Simulator/CPU/libs/systemc_installed/lib-linux64"
+                "value": "${workspaceFolder}/CPU/libs/systemc_installed/lib-linux64"
             }],
             "externalConsole": false,
             "MIMode": "gdb",

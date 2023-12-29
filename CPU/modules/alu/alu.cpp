@@ -1,9 +1,5 @@
 #include "alu.h"
 
-ALU::ALU(std::shared_ptr<Flags> flags) : flags(flags)
-{
-}
-
 void ALU::mov(std::string& op1, const std::string& op2) {
     int num1 = std::stoi(op1);
     int num2 = std::stoi(op2);

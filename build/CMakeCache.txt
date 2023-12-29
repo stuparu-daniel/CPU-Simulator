@@ -144,7 +144,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=cpu-simulator
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -213,6 +213,18 @@ Project_BINARY_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/build
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/CPU
+
+//Value Computed by CMake
+cpu-simulator_BINARY_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/build
+
+//Value Computed by CMake
+cpu-simulator_SOURCE_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/CPU
+
+//Value Computed by CMake
+enum_test_BINARY_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/build
+
+//Value Computed by CMake
+enum_test_SOURCE_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/CPU
 
 
 ########################

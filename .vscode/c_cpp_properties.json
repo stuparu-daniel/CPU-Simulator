@@ -7,14 +7,23 @@
                 "${workspaceFolder}/CPU/libs/**",
                 "${workspaceFolder}/CPU/libs/Catch2/**",
                 "${workspaceFolder}/CPU/libs/systemc-2.3.3/**",
-                "${workspaceFolder}/CPU/libs/systemc_installed/**"
+                "${workspaceFolder}/CPU/libs/systemc_installed/**",
+                "${workspaceFolder}/CPU/libs/systemc_installed/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
-            "cppStandard": "c++14",
+            "cppStandard": "c++17",
             "intelliSenseMode": "linux-clang-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "compilerArgs": [
+                "-std=c++17",
+                "-Wall",
+                "-I.",
+                "-I/home/solo/Proiect_FIC/CPU-Simulator/CPU/libs/systemc_installed/include",
+                "/home/solo/Proiect_FIC/CPU-Simulator/CPU/libs/systemc_installed/lib-linux64/libsystemc.a",
+                "-o"
+            ]
         }
     ],
     "version": 4

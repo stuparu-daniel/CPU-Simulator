@@ -1,7 +1,7 @@
 #pragma once
 
-#include "alu.h"
-#include "flags.h"
+#include "modules/alu/alu.h"
+#include "modules/flags.h"
 
 #include <map>
 #include <string>
