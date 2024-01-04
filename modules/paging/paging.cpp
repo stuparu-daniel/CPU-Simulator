@@ -38,7 +38,7 @@
 
 
 #include "paging.h"
-#include "directive.h"
+
 
 void paging::entry()
 {

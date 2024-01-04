@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 struct paging : sc_module {
         sc_in<unsigned >   paging_din; 	// input data       

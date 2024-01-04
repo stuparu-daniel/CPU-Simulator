@@ -38,7 +38,7 @@
 
 #include <climits>	// for definition on value 's MAX
 #include "decode.h"
-#include "directive.h"
+
 
 
 void decode::entry()

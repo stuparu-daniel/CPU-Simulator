@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 struct floating : sc_module {
   sc_in<bool>   	       	in_valid;	// input valid bit

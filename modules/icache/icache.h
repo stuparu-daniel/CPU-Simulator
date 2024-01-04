@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 #define BOOT_LENGTH 5
 #define MAX_CODE_LENGTH 500

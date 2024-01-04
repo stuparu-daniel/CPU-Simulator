@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/forkjoin.dir/forkjoin.cpp.o  -o forkjoin  -Wl,-rpath,/home/adrian/systemc/systemc-2.3.3/build/src ../../../../src/libsystemc.so.2.3.3 -pthread 

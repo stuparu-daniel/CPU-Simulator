@@ -42,6 +42,11 @@
 # TODO: Fix multiple driver issue in risc_cpu example.
 # TODO: Fix segfault when risc_cpu is not started from the current directory.
 
+cmake_minimum_required(VERSION 3.16)
+
+find_package(SystemCLanguage CONFIG REQUIRED)
+set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
+
 add_executable (risc_cpu main.cpp
                          directive.h
                          bios.h
@@ -83,4 +88,4 @@ foreach (risc_cpu_EXTRA ${risc_cpu_EXTRAS})
   configure_file (${CMAKE_CURRENT_SOURCE_DIR}/${risc_cpu_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${risc_cpu_EXTRA} COPYONLY)
 endforeach (risc_cpu_EXTRA ${risc_cpu_EXTRAS})
 
-configure_and_add_test (risc_cpu)
+# configure_and_add_test (risc_cpu)

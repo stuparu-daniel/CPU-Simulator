@@ -43,6 +43,18 @@ include_directories(modules
                     modules/paging
                     modules/pic)
 
+set (cpu-simulator_EXTRAS
+                      abc.asm
+                      assembler.pl
+                      bios.img
+                      dcache.img
+                      icache.img
+                      printout.img
+                      program.img
+                      register.img
+                      test.asm
+                      test1.asm)
+
 # set (cpu-simulator_EXTRAS
 #                       abc.asm
 #                       assembler.pl
@@ -58,7 +70,3 @@ include_directories(modules
 # foreach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
 #   configure_file (${CMAKE_SOURCE_DIR}/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
 # endforeach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
-
-# configure_and_add_test (cpu-simulator)
-
-# include_directories(include)
