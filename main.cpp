@@ -39,7 +39,7 @@
  *****************************************************************************/
 
 
-#include "directive.h"
+#include "modules/directive.h"
 #include "systemc.h"
 #include "bios.h"
 #include "paging.h"
@@ -296,7 +296,9 @@ int sc_main(int, char *[])
   printf("//     \n");
   printf("//     \n");
   printf("/////////////////////////////////////////////////////////////////////////\n\n\n");
-  	
+
+  
+  cout << "Components not yet good\n";
 
   fetch 	IFU("FETCH_BLOCK");
                 IFU.init_param(delay_cycles);
