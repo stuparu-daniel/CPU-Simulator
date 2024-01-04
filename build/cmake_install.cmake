@@ -1,4 +1,4 @@
-# Install script for directory: /home/solo/Proiect_FIC/CPU-Simulator/CPU
+# Install script for directory: /home/solo/Proiect_FIC/CPU-Simulator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

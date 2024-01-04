@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/main.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/main.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/main.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp"
+},
+{
+  "directory": "/home/solo/Proiect_FIC/CPU-Simulator/build",
+  "command": "/usr/bin/g++    -g   -std=gnu++14 -o CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp",
+  "file": "/home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp"
+}
+]

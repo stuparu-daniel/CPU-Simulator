@@ -1,3 +1,4 @@
-build/
-CPU/build/
-CPU/main
+./build/
+./main
+CPU-Simulator/build/
+CPU-Simulator/main

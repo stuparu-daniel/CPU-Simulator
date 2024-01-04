@@ -13,7 +13,7 @@ Run these to compile & run the program (you need to be in the "/CPU" folder):
       g++ unit-tests/*.cpp -std=c++17 -Wall -I. -I./libs/systemc_installed/include ./libs/systemc_installed/lib-linux64/libsystemc.a -lm -o main
     
     5. Compile the main files:
-      g++ *.cpp -std=c++17 -Wall -I. -I./libs/systemc_installed/include ./libs/systemc_installed/lib-linux64/libsystemc.a -lm -o main
+      g++ *.cpp -std=c++14 -Wall -I. -I./libs/systemc_installed/include ./libs/systemc_installed/lib-linux64/libsystemc.a -lm -o main
 
     6. Run the program, main.cpp file:
       ./main.cpp
