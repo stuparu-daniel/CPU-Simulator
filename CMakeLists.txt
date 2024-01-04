@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpu-simulator)
 
-set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 14)
 
 # find_package(SystemCLanguage CONFIG REQUIRED)
 # set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
@@ -29,7 +29,8 @@ add_executable (cpu-simulator main.cpp
                          modules/dcache/dcache.h
                          modules/dcache/dcache.cpp
                          modules/pic/pic.h
-                         modules/pic/pic.cpp)
+                         modules/pic/pic.cpp
+                         unit-tests/hardware_tests)
 
 add_subdirectory(libs/systemc-2.3.3)
 target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
@@ -45,7 +46,9 @@ include_directories(modules
                     modules/icache
                     modules/mmxu
                     modules/paging
-                    modules/pic)
+                    modules/pic
+                    shared
+                    unit-tests/hardware_tests)
 
 set (cpu-simulator_EXTRAS
                       abc.asm
@@ -59,6 +62,7 @@ set (cpu-simulator_EXTRAS
                       test.asm
                       test1.asm)
 
-foreach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
-  configure_file (${CMAKE_SOURCE_DIR}/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
-endforeach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
+
+foreach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})
+  configure_file (${CMAKE_SOURCE_DIR}/src/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
+endforeach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})

@@ -31,6 +31,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../modules/mmxu"
   "../modules/paging"
   "../modules/pic"
+  "../shared"
+  "../unit-tests/hardware_tests"
   "../libs/systemc-2.3.3/src"
   )
 
