@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 struct dcache : sc_module { 
   	sc_in<signed> 		datain; 	// input data

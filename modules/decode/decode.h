@@ -36,6 +36,7 @@
  *****************************************************************************/
  
 #include "systemc.h"
+#include "directive.h"
 
 struct decode : sc_module { 
   	sc_in<bool>  			resetin;      		// input reset

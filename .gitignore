@@ -1,4 +1,2 @@
-./build/
-./main
-CPU-Simulator/build/
-CPU-Simulator/main
+build
+libs/systemc-2.3.3/build

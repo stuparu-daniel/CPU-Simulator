@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 struct exec : sc_module {
   sc_in<bool>   	       	reset;			// reset not used.

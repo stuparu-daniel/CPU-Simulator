@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 struct mmxu : sc_module {
   sc_in<bool>   	       	mmx_valid;	// MMX unit enable

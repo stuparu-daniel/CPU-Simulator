@@ -37,8 +37,6 @@
 
 
 #include "dcache.h"
-#include "directive.h"
-
 
 void dcache::entry()
 {

@@ -38,7 +38,6 @@
 
 
 #include "fetch.h"
-#include "directive.h"
 
 
 void fetch::entry()

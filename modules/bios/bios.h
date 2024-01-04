@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 #define BOOT_LENGTH  5
 

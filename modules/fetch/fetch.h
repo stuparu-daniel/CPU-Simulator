@@ -36,6 +36,7 @@
  *****************************************************************************/
 
 #include "systemc.h"
+#include "directive.h"
 
 struct fetch : sc_module { 
   sc_in<unsigned > 		ramdata;	// instruction from RAM    

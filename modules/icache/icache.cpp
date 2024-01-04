@@ -41,7 +41,6 @@
 
 
 #include "icache.h"
-#include "directive.h"
 
 
 void icache::entry()

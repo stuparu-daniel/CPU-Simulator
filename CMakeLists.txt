@@ -3,6 +3,7 @@ project(cpu-simulator)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_subdirectory(libs/systemc-2.3.3)
 
 
 # TODO: Fix multiple driver issue in cpu-simulator example.
@@ -31,8 +32,19 @@ add_executable (cpu-simulator main.cpp
                          modules/pic/pic.cpp)
 target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
 
-set (cpu-simulator_EXTRAS  README
-                      README_TYPESCRIPT
+include_directories(modules
+                    modules/bios
+                    modules/dcache
+                    modules/decode
+                    modules/exec
+                    modules/fetch
+                    modules/floating
+                    modules/icache
+                    modules/mmxu
+                    modules/paging
+                    modules/pic)
+
+set (cpu-simulator_EXTRAS
                       abc.asm
                       assembler.pl
                       bios.img
@@ -47,7 +59,3 @@ set (cpu-simulator_EXTRAS  README
 foreach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
   configure_file (${CMAKE_CURRENT_SOURCE_DIR}/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
 endforeach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
-
-# configure_and_add_test (cpu-simulator)
-
-# include_directories(include)

@@ -1,7 +1,0 @@
-﻿  alu.cpp
-  cpu.cpp
-  flags.cpp
-  main.cpp
-  Generating Code...
-  LINK : D:\ProiecteTeme\UPT_CURSURI\Anul_3\FIC\Proiect\CPU-Simulator\CPU\x64\Debug\CPU.exe not found or not built by the last incremental link; performing full link
-  CPU.vcxproj -> D:\ProiecteTeme\UPT_CURSURI\Anul_3\FIC\Proiect\CPU-Simulator\CPU\x64\Debug\CPU.exe

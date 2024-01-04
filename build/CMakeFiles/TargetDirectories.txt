@@ -1,3 +1,0 @@
-/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/rebuild_cache.dir
-/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/edit_cache.dir
-/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir

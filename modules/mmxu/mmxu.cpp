@@ -38,7 +38,6 @@
 
 
 #include "mmxu.h"
-#include "directive.h"
 
 #ifdef __SUNPRO_CC
 // Martin, fix the ios stuff!
