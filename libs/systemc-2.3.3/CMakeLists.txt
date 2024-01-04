@@ -712,7 +712,7 @@ message (STATUS "===============================================================
 
 add_subdirectory (docs)
 add_subdirectory (src)
-add_subdirectory (examples)
+# add_subdirectory (examples)
 
 
 ###############################################################################

@@ -61,13 +61,15 @@ void fetch::entry()
    } else {
    	datai_tmp = ramdata.read();
    }
-   cout.setf(ios::hex,ios::basefield);
-   cout << "-----------------------" << endl;   
-   cout << "IFU :" << " mem=0x" << datai_tmp << endl;
-   cout << "IFU : pc= " << addr_tmp ;   
-   cout.setf(ios::dec,ios::basefield);
-   cout << " at CSIM " << sc_time_stamp() << endl;
-   cout << "-----------------------" << endl;   
+   if(PRINT_IFU) {
+     cout.setf(ios::hex,ios::basefield);
+     cout << "-----------------------" << endl;   
+     cout << "IFU :" << " mem=0x" << datai_tmp << endl;
+     cout << "IFU : pc= " << addr_tmp ;   
+     cout.setf(ios::dec,ios::basefield);
+     cout << " at CSIM " << sc_time_stamp() << endl;
+     cout << "-----------------------" << endl;   
+   }
 
    instruction_valid.write(true);
    instruction.write(datai_tmp);
@@ -145,15 +147,15 @@ void fetch::entry()
     		wait(memory_latency); // For data to appear
 		do { wait(); } while ( !((bios_valid == true) || (icache_valid == true)) );
     		datai_tmp = ramdata.read();
-
-   		cout.setf(ios::hex,ios::basefield);
-   		cout << "------------------------" << endl;   
-   		cout << "IFU :" << " mem=0x" << datai_tmp << endl;
-   		cout << "IFU : pc= " << addr_tmp ;   
-   		cout.setf(ios::dec,ios::basefield);
-   		cout << " at CSIM " << sc_time_stamp() << endl;
-   		cout << "------------------------" << endl;   
-
+		if(PRINT_IFU){
+   			cout.setf(ios::hex,ios::basefield);
+   			cout << "------------------------" << endl;   
+   			cout << "IFU :" << " mem=0x" << datai_tmp << endl;
+   			cout << "IFU : pc= " << addr_tmp ;   
+   			cout.setf(ios::dec,ios::basefield);
+   			cout << " at CSIM " << sc_time_stamp() << endl;
+   			cout << "------------------------" << endl;   
+		}
                 instruction_valid.write(true);
                 instruction.write(datai_tmp);
    		program_counter.write(addr_tmp);

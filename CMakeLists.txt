@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpu-simulator)
 
-set(CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 17)
+
+# find_package(SystemCLanguage CONFIG REQUIRED)
+# set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
 
 # TODO: Fix multiple driver issue in cpu-simulator example.
 # TODO: Fix segfault when cpu-simulator is not started from the current directory.
@@ -31,6 +34,7 @@ add_executable (cpu-simulator main.cpp
 add_subdirectory(libs/systemc-2.3.3)
 target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
 
+
 include_directories(modules
                     modules/bios
                     modules/dcache
@@ -55,18 +59,6 @@ set (cpu-simulator_EXTRAS
                       test.asm
                       test1.asm)
 
-# set (cpu-simulator_EXTRAS
-#                       abc.asm
-#                       assembler.pl
-#                       bios.img
-#                       dcache.img
-#                       icache.img
-#                       printout.img
-#                       program.img
-#                       register.img
-#                       test.asm
-#                       test1.asm)
-# 
-# foreach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
-#   configure_file (${CMAKE_SOURCE_DIR}/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
-# endforeach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
+foreach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})
+  configure_file (${CMAKE_SOURCE_DIR}/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
+endforeach (cpu-simulator_EXTRA ${risc_cpu_EXTRAS})

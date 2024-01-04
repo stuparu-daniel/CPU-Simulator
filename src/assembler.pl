@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 #/******************************************************************************
 #  Licensed to Accellera Systems Initiative Inc. (Accellera) under one or
 #  more contributor license agreements.  See the NOTICE file distributed
