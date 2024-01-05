@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(cpu-simulator)
 
-set (CMAKE_CXX_STANDARD 14)
+set (CMAKE_CXX_STANDARD 17)
 
 # find_package(SystemCLanguage CONFIG REQUIRED)
 # set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
@@ -30,7 +30,8 @@ add_executable (cpu-simulator main.cpp
                          modules/dcache/dcache.cpp
                          modules/pic/pic.h
                          modules/pic/pic.cpp
-                         unit-tests/hardware_tests)
+                         shared/module_testing.h
+                         unit-tests/hardware_tests/module_testing_example.cpp)
 
 add_subdirectory(libs/systemc-2.3.3)
 target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
@@ -48,6 +49,10 @@ include_directories(modules
                     modules/paging
                     modules/pic
                     shared
+                    libs
+                    libs/systemc_installed
+                    libs/systemc-2.3.3
+                    libs/Cactch2
                     unit-tests/hardware_tests)
 
 set (cpu-simulator_EXTRAS

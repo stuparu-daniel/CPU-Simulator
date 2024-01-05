@@ -4,6 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/libs/**",
+                "${workspaceFolder}/libs/systemc_installed",
+                "${workspaceFolder}/modules/**",
                 "${workspaceFolder}/shared"
             ],
             "defines": [],
