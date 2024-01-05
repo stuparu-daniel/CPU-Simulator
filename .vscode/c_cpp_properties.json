@@ -5,24 +5,16 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/libs/**",
-                "${workspaceFolder}/libs/Catch2/**",
-                "${workspaceFolder}/libs/systemc-2.3.3/**",
-                "${workspaceFolder}/libs/systemc_installed/**",
-                "${workspaceFolder}/libs/systemc_installed/include"
+                "${workspaceFolder}/libs/systemc_installed",
+                "${workspaceFolder}/modules/**",
+                "${workspaceFolder}/shared"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
-            "cppStandard": "c++17",
+            "cppStandard": "c++14",
             "intelliSenseMode": "linux-clang-x64",
-            "compilerArgs": [
-                "-std=c++17",
-                "-Wall",
-                "-I.",
-                "-I${workspaceFolder}/libs/systemc_installed/include",
-                "${workspaceFolder}/libs/systemc_installed/lib-linux64/libsystemc.a",
-                "-o"
-            ]
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

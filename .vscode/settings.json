@@ -1,5 +1,4 @@
 {
-    "dotnet.defaultSolution": "CPU/CPU.sln",
     "cmake.sourceDirectory": "/home/solo/Proiect_FIC/CPU-Simulator",
     "files.associations": {
         "array": "cpp",

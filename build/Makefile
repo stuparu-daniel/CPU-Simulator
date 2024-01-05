@@ -182,6 +182,19 @@ systemc/fast:
 	$(MAKE) -f libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/build.make libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/build
 .PHONY : systemc/fast
 
+#=============================================================================
+# Target rules for targets named shared
+
+# Build rule for target.
+shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shared
+.PHONY : shared
+
+# fast build rule for target.
+shared/fast:
+	$(MAKE) -f shared/CMakeFiles/shared.dir/build.make shared/CMakeFiles/shared.dir/build
+.PHONY : shared/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -493,6 +506,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... cpu-simulator"
 	@echo "... systemc"
+	@echo "... shared"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -19,7 +19,7 @@
 #ifndef SC_INCLUDE_DYNAMIC_PROCESSES
 #define SC_INCLUDE_DYNAMIC_PROCESSES
 #endif
-#include <systemc.h>
+#include "systemc.h"
 
 
 namespace test_utils

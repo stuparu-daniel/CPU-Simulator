@@ -60,145 +60,145 @@ include CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/main.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cpu-simulator.dir/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/main.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/main.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/main.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/main.cpp
 
 CMakeFiles/cpu-simulator.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/main.cpp > CMakeFiles/cpu-simulator.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/main.cpp > CMakeFiles/cpu-simulator.dir/main.cpp.i
 
 CMakeFiles/cpu-simulator.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/main.cpp -o CMakeFiles/cpu-simulator.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/main.cpp -o CMakeFiles/cpu-simulator.dir/main.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.o: ../modules/bios/bios.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp > CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp > CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp -o CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/bios/bios.cpp -o CMakeFiles/cpu-simulator.dir/modules/bios/bios.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o: ../modules/paging/paging.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp > CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp > CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp -o CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp -o CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.o: ../modules/icache/icache.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp > CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp > CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp -o CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/icache/icache.cpp -o CMakeFiles/cpu-simulator.dir/modules/icache/icache.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.o: ../modules/fetch/fetch.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp > CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp > CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp -o CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/fetch/fetch.cpp -o CMakeFiles/cpu-simulator.dir/modules/fetch/fetch.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.o: ../modules/decode/decode.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp > CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp > CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp -o CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/decode/decode.cpp -o CMakeFiles/cpu-simulator.dir/modules/decode/decode.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.o: ../modules/exec/exec.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp > CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp > CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp -o CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/exec/exec.cpp -o CMakeFiles/cpu-simulator.dir/modules/exec/exec.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o: ../modules/mmxu/mmxu.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp > CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp > CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp -o CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp -o CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o: ../modules/floating/floating.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp > CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp > CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp -o CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/floating/floating.cpp -o CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o: ../modules/dcache/dcache.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp > CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp > CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp -o CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/dcache/dcache.cpp -o CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.s
 
 CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
 CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o: ../modules/pic/pic.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp
 
 CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp > CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp > CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.i
 
 CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp -o CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp -o CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s
 
 # Object files for target cpu-simulator
 cpu__simulator_OBJECTS = \
@@ -230,6 +230,7 @@ cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/build.make
 cpu-simulator: libs/systemc-2.3.3/src/libsystemc.so.2.3.3
+cpu-simulator: shared/libshared.so
 cpu-simulator: CMakeFiles/cpu-simulator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable cpu-simulator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpu-simulator.dir/link.txt --verbose=$(VERBOSE)
