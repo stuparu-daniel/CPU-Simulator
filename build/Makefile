@@ -546,6 +546,33 @@ modules/stimulus/stimulus.cpp.s:
 	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.s
 .PHONY : modules/stimulus/stimulus.cpp.s
 
+unit-tests/hardware_tests/module_testing_example.o: unit-tests/hardware_tests/module_testing_example.cpp.o
+
+.PHONY : unit-tests/hardware_tests/module_testing_example.o
+
+# target to build an object file
+unit-tests/hardware_tests/module_testing_example.cpp.o:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.o
+.PHONY : unit-tests/hardware_tests/module_testing_example.cpp.o
+
+unit-tests/hardware_tests/module_testing_example.i: unit-tests/hardware_tests/module_testing_example.cpp.i
+
+.PHONY : unit-tests/hardware_tests/module_testing_example.i
+
+# target to preprocess a source file
+unit-tests/hardware_tests/module_testing_example.cpp.i:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.i
+.PHONY : unit-tests/hardware_tests/module_testing_example.cpp.i
+
+unit-tests/hardware_tests/module_testing_example.s: unit-tests/hardware_tests/module_testing_example.cpp.s
+
+.PHONY : unit-tests/hardware_tests/module_testing_example.s
+
+# target to generate assembly for a file
+unit-tests/hardware_tests/module_testing_example.cpp.s:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.s
+.PHONY : unit-tests/hardware_tests/module_testing_example.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -600,6 +627,9 @@ help:
 	@echo "... modules/stimulus/stimulus.o"
 	@echo "... modules/stimulus/stimulus.i"
 	@echo "... modules/stimulus/stimulus.s"
+	@echo "... unit-tests/hardware_tests/module_testing_example.o"
+	@echo "... unit-tests/hardware_tests/module_testing_example.i"
+	@echo "... unit-tests/hardware_tests/module_testing_example.s"
 .PHONY : help
 
 

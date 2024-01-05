@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o"
   "CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o"
   "CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o"
+  "CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.o"
   "cpu-simulator"
   "cpu-simulator.pdb"
 )

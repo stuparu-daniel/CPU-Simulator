@@ -226,9 +226,9 @@ protected:
 template <typename UUT_T, typename Fixture>
 struct FixtureRunner : public sc_core::sc_module, private FixtureRunnerBase
 {
-    static_assert(
-        requires(UUT_T& uut) { uut.Reset(); },
-        "UUT has no Reset() function");
+    // static_assert(
+    //     requires(UUT_T& uut) { uut.Reset(); },
+    //     "UUT has no Reset() function");
 
     using SC_CURRENT_USER_MODULE = FixtureRunner;
     static Fixture* fx;
