@@ -34,7 +34,7 @@ add_executable (cpu-simulator main.cpp
                          modules/rng/rng.cpp
                          modules/stimulus/stimulus.h
                          modules/stimulus/stimulus.cpp
-                         unit-tests/hardware_tests/module_testing_example.cpp
+                        #  unit-tests/hardware_tests/module_testing_example.cpp
                          )
 
 add_subdirectory(libs/systemc-2.3.3)

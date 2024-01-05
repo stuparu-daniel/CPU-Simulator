@@ -17,7 +17,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o"
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/rng/rng.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o"
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/stimulus/stimulus.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o"
-  "/home/solo/Proiect_FIC/CPU-Simulator/unit-tests/hardware_tests/module_testing_example.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

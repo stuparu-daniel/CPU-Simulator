@@ -1,8 +1,3 @@
-/*************************************************************************/ /*!
-@Copyright      Copyright (c) Imagination Technologies Ltd. All Rights Reserved
-@License        Strictly Confidential.
-*/
-/**************************************************************************/
 #define CATCH_CONFIG_RUNNER
 #include <module_testing.h>
 
