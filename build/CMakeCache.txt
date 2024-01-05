@@ -20,6 +20,33 @@ BUILD_SHARED_LIBS:BOOL=ON
 //Build source documentation with Doxygen.
 BUILD_SOURCE_DOCUMENTATION:BOOL=OFF
 
+//Build documentation examples
+CATCH_BUILD_EXAMPLES:BOOL=OFF
+
+//Build extra tests
+CATCH_BUILD_EXTRA_TESTS:BOOL=OFF
+
+//Builds static library from the main implementation. EXPERIMENTAL
+CATCH_BUILD_STATIC_LIBRARY:BOOL=OFF
+
+//Build SelfTest project
+CATCH_BUILD_TESTING:BOOL=ON
+
+//Generate coverage for codecov.io
+CATCH_ENABLE_COVERAGE:BOOL=OFF
+
+//Enable all warnings as errors
+CATCH_ENABLE_WERROR:BOOL=ON
+
+//Install documentation alongside library
+CATCH_INSTALL_DOCS:BOOL=ON
+
+//Install contrib alongside library
+CATCH_INSTALL_HELPERS:BOOL=ON
+
+//Perform SelfTests with Valgrind
+CATCH_USE_VALGRIND:BOOL=OFF
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -234,6 +261,21 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=cpu-simulator
 
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=2.13.10
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=2
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=13
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=10
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
+
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
@@ -295,6 +337,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+Catch2_BINARY_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/build/libs/Catch2
+
+//Value Computed by CMake
+Catch2_SOURCE_DIR:STATIC=/home/solo/Proiect_FIC/CPU-Simulator/libs/Catch2
 
 //Disable async_request_update() support.
 DISABLE_ASYNC_UPDATES:BOOL=OFF
@@ -535,7 +583,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

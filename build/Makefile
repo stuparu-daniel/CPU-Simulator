@@ -492,6 +492,60 @@ modules/pic/pic.cpp.s:
 	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s
 .PHONY : modules/pic/pic.cpp.s
 
+modules/rng/rng.o: modules/rng/rng.cpp.o
+
+.PHONY : modules/rng/rng.o
+
+# target to build an object file
+modules/rng/rng.cpp.o:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o
+.PHONY : modules/rng/rng.cpp.o
+
+modules/rng/rng.i: modules/rng/rng.cpp.i
+
+.PHONY : modules/rng/rng.i
+
+# target to preprocess a source file
+modules/rng/rng.cpp.i:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.i
+.PHONY : modules/rng/rng.cpp.i
+
+modules/rng/rng.s: modules/rng/rng.cpp.s
+
+.PHONY : modules/rng/rng.s
+
+# target to generate assembly for a file
+modules/rng/rng.cpp.s:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.s
+.PHONY : modules/rng/rng.cpp.s
+
+modules/stimulus/stimulus.o: modules/stimulus/stimulus.cpp.o
+
+.PHONY : modules/stimulus/stimulus.o
+
+# target to build an object file
+modules/stimulus/stimulus.cpp.o:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o
+.PHONY : modules/stimulus/stimulus.cpp.o
+
+modules/stimulus/stimulus.i: modules/stimulus/stimulus.cpp.i
+
+.PHONY : modules/stimulus/stimulus.i
+
+# target to preprocess a source file
+modules/stimulus/stimulus.cpp.i:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.i
+.PHONY : modules/stimulus/stimulus.cpp.i
+
+modules/stimulus/stimulus.s: modules/stimulus/stimulus.cpp.s
+
+.PHONY : modules/stimulus/stimulus.s
+
+# target to generate assembly for a file
+modules/stimulus/stimulus.cpp.s:
+	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.s
+.PHONY : modules/stimulus/stimulus.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -540,6 +594,12 @@ help:
 	@echo "... modules/pic/pic.o"
 	@echo "... modules/pic/pic.i"
 	@echo "... modules/pic/pic.s"
+	@echo "... modules/rng/rng.o"
+	@echo "... modules/rng/rng.i"
+	@echo "... modules/rng/rng.s"
+	@echo "... modules/stimulus/stimulus.o"
+	@echo "... modules/stimulus/stimulus.i"
+	@echo "... modules/stimulus/stimulus.s"
 .PHONY : help
 
 

@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o"
   "CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o"
   "CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o"
+  "CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o"
+  "CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o"
   "cpu-simulator"
   "cpu-simulator.pdb"
 )

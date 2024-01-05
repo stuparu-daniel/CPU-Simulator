@@ -200,6 +200,32 @@ CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp -o CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s
 
+CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
+CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o: ../modules/rng/rng.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/rng/rng.cpp
+
+CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/rng/rng.cpp > CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.i
+
+CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/rng/rng.cpp -o CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.s
+
+CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o: CMakeFiles/cpu-simulator.dir/flags.make
+CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o: ../modules/stimulus/stimulus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o -c /home/solo/Proiect_FIC/CPU-Simulator/modules/stimulus/stimulus.cpp
+
+CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/solo/Proiect_FIC/CPU-Simulator/modules/stimulus/stimulus.cpp > CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.i
+
+CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/solo/Proiect_FIC/CPU-Simulator/modules/stimulus/stimulus.cpp -o CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.s
+
 # Object files for target cpu-simulator
 cpu__simulator_OBJECTS = \
 "CMakeFiles/cpu-simulator.dir/main.cpp.o" \
@@ -212,7 +238,9 @@ cpu__simulator_OBJECTS = \
 "CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o" \
 "CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o" \
 "CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o" \
-"CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o"
+"CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o" \
+"CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o" \
+"CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o"
 
 # External object files for target cpu-simulator
 cpu__simulator_EXTERNAL_OBJECTS =
@@ -228,11 +256,13 @@ cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/floating/floating.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/dcache/dcache.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o
+cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o
+cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/build.make
 cpu-simulator: libs/systemc-2.3.3/src/libsystemc.so.2.3.3
 cpu-simulator: shared/libshared.so
 cpu-simulator: CMakeFiles/cpu-simulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable cpu-simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable cpu-simulator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpu-simulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -15,6 +15,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o"
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o"
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o"
+  "/home/solo/Proiect_FIC/CPU-Simulator/modules/rng/rng.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o"
+  "/home/solo/Proiect_FIC/CPU-Simulator/modules/stimulus/stimulus.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -31,9 +33,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../modules/mmxu"
   "../modules/paging"
   "../modules/pic"
+  "../modules/rng"
+  "../modules/stimulus"
   "../shared"
-  "../unit-tests/hardware_tests"
   "../libs/systemc-2.3.3/src"
+  "../libs/Catch2/single_include"
   )
 
 # Targets to which this target links.

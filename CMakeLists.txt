@@ -30,14 +30,19 @@ add_executable (cpu-simulator main.cpp
                          modules/dcache/dcache.cpp
                          modules/pic/pic.h
                          modules/pic/pic.cpp
+                         modules/rng/rng.h
+                         modules/rng/rng.cpp
+                         modules/stimulus/stimulus.h
+                         modules/stimulus/stimulus.cpp
                         #  unit-tests/hardware_tests/module_testing_example.cpp
-
                          )
 
 add_subdirectory(libs/systemc-2.3.3)
+add_subdirectory(libs/Catch2)
 add_subdirectory(shared)
-target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
 set_target_properties(shared PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
+target_link_libraries (cpu-simulator PUBLIC Catch2)
 target_link_libraries (cpu-simulator PRIVATE shared)
 
 include_directories(modules
@@ -51,12 +56,15 @@ include_directories(modules
                     modules/mmxu
                     modules/paging
                     modules/pic
+                    modules/rng
+                    modules/stimulus
                     shared
                     # libs
                     # libs/systemc_installed
                     # libs/systemc-2.3.3
                     # libs/Cactch2
-                    unit-tests/hardware_tests)
+                    # unit-tests/hardware_tests
+                    )
 
 set (cpu-simulator_EXTRAS
                       abc.asm
