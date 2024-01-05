@@ -13,21 +13,27 @@ struct rng : public sc_module {
   sc_in<bool>                   reset;
     sc_in_clk                   CLK;
 
-  SC_CTOR (rng) {
-    SC_METHOD (CASR);
+  int wait_cycles; 					// cycles # it takes to generate random number
+
+//   void init_param(int given_delay_cycles) {
+//     wait_cycles = given_delay_cycles; 
+//   }
+
+  SC_CTOR(rng) {
+    SC_METHOD(CASR);
     sensitive_pos << CLK;
     sensitive_neg << reset;
 
-    SC_METHOD (LFSR);
+    SC_METHOD(LFSR);
     sensitive_pos << CLK;
     sensitive_neg << reset;
 
-    SC_METHOD (combinate);
+    SC_METHOD(combinate);
     sensitive_pos << CLK;
     sensitive_neg << reset;
   }
 
-  void CASR ();
-  void LFSR ();
-  void combinate ();
+  void CASR();
+  void LFSR();
+  void combinate();
 };

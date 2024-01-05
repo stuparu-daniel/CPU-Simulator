@@ -41,6 +41,7 @@
 
 // #include "shared/directive.h"
 #include "systemc.h"
+
 #include "bios.h"
 #include "paging.h"
 #include "icache.h"
@@ -51,6 +52,9 @@
 #include "floating.h"
 #include "dcache.h"
 #include "pic.h"
+#include "rng.h"
+#include "stimulus.h"
+
 #include <climits>
 #include <cstdlib>
 #include <time.h>
@@ -211,7 +215,7 @@ int sc_main(int, char *[])
   sc_signal<bool,mw>     fout_valid("FOUT_VALID") ;
   sc_signal<unsigned,mw> fdestout("FDESTOUT") ;
   
-  // ************************ PIC *****************************************
+  // ************************ PIC ****************************************
   sc_signal<bool>        ireq0("IREQ0") ;
   sc_signal<bool>        ireq1("IREQ1") ;
   sc_signal<bool>        ireq2("IREQ2") ;
@@ -224,7 +228,7 @@ int sc_main(int, char *[])
   sc_signal<bool>        intack("INTACK") ;
   sc_signal<bool>        intack_cpu("INTACK_CPU") ;
 
-  // ************************ MMX ***********************************
+  // ************************ MMX ****************************************
   // MMX mmx_valid = mmx_valid
   // MMX opcode = alu_op
   // MMX mmxa = src_A
@@ -240,6 +244,19 @@ int sc_main(int, char *[])
   sc_signal<bool>        dsp_data_valid("DSP_DATA_VALID");
   sc_signal<bool>        dsp_input_valid("DSP_INPUT_VALID");
   sc_signal<bool>        dsp_data_requested("DSP_DATA_REQUESTED");
+
+  // ************************ RNG *****************************************
+  sc_signal<bool>        loadseed_i("LOADSEED_I");
+  sc_signal<sc_uint<32>> seed_i("SEED_I");
+  sc_signal<sc_uint<32>> number_o("NUMBER_O");
+  sc_signal<bool>        internal_reset_signal("INTERNAL_RESET_SIGNAL");
+
+  // ************************ STIMULI *************************************
+  // STIMULUS loadseed_o = loadseed_i
+  // STIMULUS seed_o = seed_i
+  // STIMULUS number_i = number_o
+  sc_signal<sc_uint<32>> initial_seed_i("INITIAL_SEED_I");
+  initial_seed_i.write(0x12678);  
 
   ////////////////////////////////////////////////////////////////////////////
   // 				MAIN PROGRAM 
@@ -363,6 +380,22 @@ int sc_main(int, char *[])
   pic		APIC("PIC_BLOCK");
 		APIC << ireq0 << ireq1 << ireq2 << ireq3 <<intack_cpu << rd_wr 
 		<< intack_cpu << intreq << intack << vectno;
+
+  rng           RNG("RNG_BLOCK");
+                // RNG.init_param(delay_cycles);
+                RNG.CLK(clk);
+                RNG.reset(internal_reset_signal);
+                RNG.loadseed_i(loadseed_i);
+                RNG.seed_i(seed_i);
+                RNG.number_o(number_o);
+
+  stimulus      STIMULUS("STIMULUS_BLOCK");
+                STIMULUS.reset(internal_reset_signal);
+                STIMULUS.CLK(clk);
+                STIMULUS.loadseed_o(loadseed_i);
+                STIMULUS.number_i(number_o);
+                STIMULUS.seed_o(seed_i);
+                STIMULUS.initial_seed_i(initial_seed_i);
 
   time_t tbuffer = time(NULL);
 
