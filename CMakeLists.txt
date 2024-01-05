@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(cpu-simulator)
+project(cpu-simulator LANGUAGES C CXX)
 
 set (CMAKE_CXX_STANDARD 17)
 
@@ -9,7 +9,7 @@ set (CMAKE_CXX_STANDARD 17)
 # TODO: Fix multiple driver issue in cpu-simulator example.
 # TODO: Fix segfault when cpu-simulator is not started from the current directory.
 add_executable (cpu-simulator main.cpp
-                         modules/directive.h
+                        #  shared/directive.h
                          modules/bios/bios.h
                          modules/bios/bios.cpp
                          modules/paging/paging.h
@@ -30,12 +30,15 @@ add_executable (cpu-simulator main.cpp
                          modules/dcache/dcache.cpp
                          modules/pic/pic.h
                          modules/pic/pic.cpp
-                         shared/module_testing.h
-                         unit-tests/hardware_tests/module_testing_example.cpp)
+                        #  unit-tests/hardware_tests/module_testing_example.cpp
+
+                         )
 
 add_subdirectory(libs/systemc-2.3.3)
+add_subdirectory(shared)
 target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
-
+set_target_properties(shared PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries (cpu-simulator PRIVATE shared)
 
 include_directories(modules
                     modules/bios
@@ -49,10 +52,10 @@ include_directories(modules
                     modules/paging
                     modules/pic
                     shared
-                    libs
-                    libs/systemc_installed
-                    libs/systemc-2.3.3
-                    libs/Cactch2
+                    # libs
+                    # libs/systemc_installed
+                    # libs/systemc-2.3.3
+                    # libs/Cactch2
                     unit-tests/hardware_tests)
 
 set (cpu-simulator_EXTRAS

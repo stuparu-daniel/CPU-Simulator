@@ -17,6 +17,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../libs/systemc-2.3.3/cmake/SystemCTLMConfig.cmake.in"
   "../libs/systemc-2.3.3/docs/CMakeLists.txt"
   "../libs/systemc-2.3.3/src/CMakeLists.txt"
+  "../shared/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
@@ -63,10 +64,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libs/systemc-2.3.3/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libs/systemc-2.3.3/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libs/systemc-2.3.3/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "shared/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/cpu-simulator.dir/DependInfo.cmake"
   "libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/DependInfo.cmake"
+  "shared/CMakeFiles/shared.dir/DependInfo.cmake"
   )

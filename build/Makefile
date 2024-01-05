@@ -182,6 +182,19 @@ systemc/fast:
 	$(MAKE) -f libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/build.make libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/build
 .PHONY : systemc/fast
 
+#=============================================================================
+# Target rules for targets named shared
+
+# Build rule for target.
+shared: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 shared
+.PHONY : shared
+
+# fast build rule for target.
+shared/fast:
+	$(MAKE) -f shared/CMakeFiles/shared.dir/build.make shared/CMakeFiles/shared.dir/build
+.PHONY : shared/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -479,33 +492,6 @@ modules/pic/pic.cpp.s:
 	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.s
 .PHONY : modules/pic/pic.cpp.s
 
-unit-tests/hardware_tests/module_testing_example.o: unit-tests/hardware_tests/module_testing_example.cpp.o
-
-.PHONY : unit-tests/hardware_tests/module_testing_example.o
-
-# target to build an object file
-unit-tests/hardware_tests/module_testing_example.cpp.o:
-	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.o
-.PHONY : unit-tests/hardware_tests/module_testing_example.cpp.o
-
-unit-tests/hardware_tests/module_testing_example.i: unit-tests/hardware_tests/module_testing_example.cpp.i
-
-.PHONY : unit-tests/hardware_tests/module_testing_example.i
-
-# target to preprocess a source file
-unit-tests/hardware_tests/module_testing_example.cpp.i:
-	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.i
-.PHONY : unit-tests/hardware_tests/module_testing_example.cpp.i
-
-unit-tests/hardware_tests/module_testing_example.s: unit-tests/hardware_tests/module_testing_example.cpp.s
-
-.PHONY : unit-tests/hardware_tests/module_testing_example.s
-
-# target to generate assembly for a file
-unit-tests/hardware_tests/module_testing_example.cpp.s:
-	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.s
-.PHONY : unit-tests/hardware_tests/module_testing_example.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -520,6 +506,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... cpu-simulator"
 	@echo "... systemc"
+	@echo "... shared"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -553,9 +540,6 @@ help:
 	@echo "... modules/pic/pic.o"
 	@echo "... modules/pic/pic.i"
 	@echo "... modules/pic/pic.s"
-	@echo "... unit-tests/hardware_tests/module_testing_example.o"
-	@echo "... unit-tests/hardware_tests/module_testing_example.i"
-	@echo "... unit-tests/hardware_tests/module_testing_example.s"
 .PHONY : help
 
 

@@ -55,17 +55,20 @@ CMAKE_BINARY_DIR = /home/solo/Proiect_FIC/CPU-Simulator/build
 # The main recursive "all" target.
 all: CMakeFiles/cpu-simulator.dir/all
 all: libs/systemc-2.3.3/all
+all: shared/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: libs/systemc-2.3.3/preinstall
+preinstall: shared/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/cpu-simulator.dir/clean
 clean: libs/systemc-2.3.3/clean
+clean: shared/clean
 
 .PHONY : clean
 
@@ -127,13 +130,32 @@ libs/systemc-2.3.3/src/clean: libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/clea
 .PHONY : libs/systemc-2.3.3/src/clean
 
 #=============================================================================
+# Directory level rules for directory shared
+
+# Recursive "all" directory target.
+shared/all: shared/CMakeFiles/shared.dir/all
+
+.PHONY : shared/all
+
+# Recursive "preinstall" directory target.
+shared/preinstall:
+
+.PHONY : shared/preinstall
+
+# Recursive "clean" directory target.
+shared/clean: shared/CMakeFiles/shared.dir/clean
+
+.PHONY : shared/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/cpu-simulator.dir
 
 # All Build rule for target.
 CMakeFiles/cpu-simulator.dir/all: libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/all
+CMakeFiles/cpu-simulator.dir/all: shared/CMakeFiles/shared.dir/all
 	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/depend
 	$(MAKE) -f CMakeFiles/cpu-simulator.dir/build.make CMakeFiles/cpu-simulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target cpu-simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target cpu-simulator"
 .PHONY : CMakeFiles/cpu-simulator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -179,6 +201,33 @@ systemc: libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/rule
 libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/clean:
 	$(MAKE) -f libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/build.make libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/clean
 .PHONY : libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/clean
+
+#=============================================================================
+# Target rules for target shared/CMakeFiles/shared.dir
+
+# All Build rule for target.
+shared/CMakeFiles/shared.dir/all:
+	$(MAKE) -f shared/CMakeFiles/shared.dir/build.make shared/CMakeFiles/shared.dir/depend
+	$(MAKE) -f shared/CMakeFiles/shared.dir/build.make shared/CMakeFiles/shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=12 "Built target shared"
+.PHONY : shared/CMakeFiles/shared.dir/all
+
+# Build rule for subdir invocation for target.
+shared/CMakeFiles/shared.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 shared/CMakeFiles/shared.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles 0
+.PHONY : shared/CMakeFiles/shared.dir/rule
+
+# Convenience name for target.
+shared: shared/CMakeFiles/shared.dir/rule
+
+.PHONY : shared
+
+# clean rule for target.
+shared/CMakeFiles/shared.dir/clean:
+	$(MAKE) -f shared/CMakeFiles/shared.dir/build.make shared/CMakeFiles/shared.dir/clean
+.PHONY : shared/CMakeFiles/shared.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

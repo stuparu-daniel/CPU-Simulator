@@ -39,7 +39,7 @@
  *****************************************************************************/
 
 
-#include "modules/directive.h"
+// #include "shared/directive.h"
 #include "systemc.h"
 #include "bios.h"
 #include "paging.h"

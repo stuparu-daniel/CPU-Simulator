@@ -15,7 +15,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/mmxu/mmxu.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/mmxu/mmxu.cpp.o"
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/paging/paging.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/paging/paging.cpp.o"
   "/home/solo/Proiect_FIC/CPU-Simulator/modules/pic/pic.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o"
-  "/home/solo/Proiect_FIC/CPU-Simulator/unit-tests/hardware_tests/module_testing_example.cpp" "/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/cpu-simulator.dir/unit-tests/hardware_tests/module_testing_example.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -33,10 +32,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../modules/paging"
   "../modules/pic"
   "../shared"
-  "../libs"
-  "../libs/systemc_installed"
-  "../libs/systemc-2.3.3"
-  "../libs/Cactch2"
   "../unit-tests/hardware_tests"
   "../libs/systemc-2.3.3/src"
   )
@@ -44,6 +39,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/solo/Proiect_FIC/CPU-Simulator/build/libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/DependInfo.cmake"
+  "/home/solo/Proiect_FIC/CPU-Simulator/build/shared/CMakeFiles/shared.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
