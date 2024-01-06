@@ -1,4 +1,4 @@
-# Install script for directory: /home/solo/Proiect_FIC/CPU-Simulator
+# Install script for directory: /home/dani/fic/CPU-Simulator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,24 +37,29 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/solo/Proiect_FIC/CPU-Simulator/build/libs/systemc-2.3.3/cmake_install.cmake")
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/solo/Proiect_FIC/CPU-Simulator/build/libs/Catch2/cmake_install.cmake")
+  include("/home/dani/fic/CPU-Simulator/build/libs/systemc-2.3.3/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/solo/Proiect_FIC/CPU-Simulator/build/shared/cmake_install.cmake")
+  include("/home/dani/fic/CPU-Simulator/build/libs/Catch2/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/cmake_install.cmake")
+  include("/home/dani/fic/CPU-Simulator/build/shared/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/dani/fic/CPU-Simulator/build/unit-tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -65,5 +70,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/solo/Proiect_FIC/CPU-Simulator/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dani/fic/CPU-Simulator/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
