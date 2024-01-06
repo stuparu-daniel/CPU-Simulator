@@ -57,6 +57,7 @@ struct decode : sc_module {
   	sc_in<bool>  			display_done;      	// display to monitor done
   	sc_in<unsigned >  		pc;      		// program counter from IFU
   	sc_in<bool>  			pred_on;      		// branch prediction is on
+	sc_in<sc_uint<32>>      random;             // randomly generated number
   	sc_out<unsigned > 		br_instruction_address; // branch invoke instruction
   	sc_out<bool>  			next_pc;      		// next pc ++ ?
   	sc_out<bool>  			branch_valid;      	// branch valid signal

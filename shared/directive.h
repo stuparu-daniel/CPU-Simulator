@@ -47,4 +47,4 @@
 #define PRINT_ICU false
 #define PRINT_MMU false
 #define PRINT_BIOS false
-#define PRINT_RNG true
+#define PRINT_RNG false

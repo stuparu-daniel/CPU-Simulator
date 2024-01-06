@@ -4,7 +4,7 @@ void rng::combinate() {
     if (!reset.read()) {
       number_o.write(0);
     } else {
-      number_o.write(LFSR_reg.read().range(31, 0) ^ CASR_reg.read().range(31, 0));
+      number_o.write((LFSR_reg.read().range(31, 0) ^ CASR_reg.read().range(31, 0)) & 0x7FFFFFF);
     }
 	
     if(PRINT_RNG && wait_cycles <= 0) {

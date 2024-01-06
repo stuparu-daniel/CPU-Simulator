@@ -225,6 +225,10 @@ while(<FP>){
 	if ($opcode =~ /\bflush\b/) {
 		printf ("0xe0000000");
 	}
+	if ($opcode =~ /\brng\b/) {
+		printf ("0xf2");
+		printf ("%01x00000",$destC);
+	}
 	if ($CODEGEN) {
 		printf ("\n");
 	} else {

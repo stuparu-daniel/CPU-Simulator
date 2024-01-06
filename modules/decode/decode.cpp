@@ -756,6 +756,19 @@ void decode::entry()
 					decode_valid.write(false);
 					wait();
 					break;
+                        case 0xf2:      // rng R1
+                                        cout << "\t\t\tID: R" << regC_tmp << "=" << random.read() << endl;
+                                        cout << "\t\t\t at CSIM " << sc_time_stamp() << endl;
+                			cout << "\t\t\t-------------------------------" << endl;
+                                        src_A.write(random.read());
+                                        src_B.write(0);
+					alu_src.write(regC_tmp);
+					alu_op.write(3);	
+					decode_valid.write(true);
+					wait();
+					decode_valid.write(false);
+					wait();
+					break;
                         case 0xff:      // QUIT
 					printf("\t\t\tID: - SHUTDOWN - ");
 					cout << "at CSIM " << sc_time_stamp() << endl;
