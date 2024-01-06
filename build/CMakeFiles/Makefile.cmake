@@ -22,6 +22,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../libs/systemc-2.3.3/docs/CMakeLists.txt"
   "../libs/systemc-2.3.3/src/CMakeLists.txt"
   "../shared/CMakeLists.txt"
+  "../unit-tests/CMakeLists.txt"
+  "../unit-tests/hardware_tests/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
@@ -71,6 +73,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libs/systemc-2.3.3/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libs/Catch2/CMakeFiles/CMakeDirectoryInformation.cmake"
   "shared/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "unit-tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "unit-tests/hardware_tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -78,4 +82,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/cpu-simulator.dir/DependInfo.cmake"
   "libs/systemc-2.3.3/src/CMakeFiles/systemc.dir/DependInfo.cmake"
   "shared/CMakeFiles/shared.dir/DependInfo.cmake"
+  "unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir/DependInfo.cmake"
   )

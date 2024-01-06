@@ -3,13 +3,9 @@ project(cpu-simulator LANGUAGES C CXX)
 
 set (CMAKE_CXX_STANDARD 17)
 
-# find_package(SystemCLanguage CONFIG REQUIRED)
-# set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
-
 # TODO: Fix multiple driver issue in cpu-simulator example.
 # TODO: Fix segfault when cpu-simulator is not started from the current directory.
 add_executable (cpu-simulator main.cpp
-                        #  shared/directive.h
                          modules/bios/bios.h
                          modules/bios/bios.cpp
                          modules/paging/paging.h
@@ -34,16 +30,7 @@ add_executable (cpu-simulator main.cpp
                          modules/rng/rng.cpp
                          modules/stimulus/stimulus.h
                          modules/stimulus/stimulus.cpp
-                        #  unit-tests/hardware_tests/module_testing_example.cpp
                          )
-
-add_subdirectory(libs/systemc-2.3.3)
-add_subdirectory(libs/Catch2)
-add_subdirectory(shared)
-set_target_properties(shared PROPERTIES LINKER_LANGUAGE CXX)
-target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
-target_link_libraries (cpu-simulator PUBLIC Catch2)
-target_link_libraries (cpu-simulator PRIVATE shared)
 
 include_directories(modules
                     modules/bios
@@ -59,26 +46,31 @@ include_directories(modules
                     modules/rng
                     modules/stimulus
                     shared
-                    # libs
-                    # libs/systemc_installed
-                    # libs/systemc-2.3.3
-                    # libs/Cactch2
-                    # unit-tests/hardware_tests
                     )
 
-set (cpu-simulator_EXTRAS
-                      abc.asm
-                      assembler.pl
-                      bios.img
-                      dcache.img
-                      icache.img
-                      printout.img
-                      program.img
-                      register.img
-                      test.asm
-                      test1.asm)
+
+add_subdirectory(libs/systemc-2.3.3)
+add_subdirectory(libs/Catch2)
+add_subdirectory(shared)
+add_subdirectory(unit-tests)
+set_target_properties(shared PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
+target_link_libraries (cpu-simulator PUBLIC Catch2)
+target_link_libraries (cpu-simulator PRIVATE shared)
+
+# set (cpu-simulator_EXTRAS
+#                       abc.asm
+#                       assembler.pl
+#                       bios.img
+#                       dcache.img
+#                       icache.img
+#                       printout.img
+#                       program.img
+#                       register.img
+#                       test.asm
+#                       test1.asm)
 
 
-foreach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})
-  configure_file (${CMAKE_SOURCE_DIR}/src/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
-endforeach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})
+# foreach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})
+#   configure_file (${CMAKE_SOURCE_DIR}/src/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
+# endforeach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})

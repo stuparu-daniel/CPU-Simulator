@@ -15,9 +15,6 @@ struct rng : public sc_module {
 
   int wait_cycles; 					// cycles # it takes to generate random number
 
-//   void init_param(int given_delay_cycles) {
-//     wait_cycles = given_delay_cycles; 
-//   }
 
   SC_CTOR(rng) {
     SC_METHOD(CASR);
@@ -31,6 +28,8 @@ struct rng : public sc_module {
     SC_METHOD(combinate);
     sensitive_pos << CLK;
     sensitive_neg << reset;
+
+    wait_cycles = 9;
   }
 
   void CASR();

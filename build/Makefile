@@ -195,6 +195,19 @@ shared/fast:
 	$(MAKE) -f shared/CMakeFiles/shared.dir/build.make shared/CMakeFiles/shared.dir/build
 .PHONY : shared/fast
 
+#=============================================================================
+# Target rules for targets named module_testing_example.test
+
+# Build rule for target.
+module_testing_example.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 module_testing_example.test
+.PHONY : module_testing_example.test
+
+# fast build rule for target.
+module_testing_example.test/fast:
+	$(MAKE) -f unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir/build
+.PHONY : module_testing_example.test/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -561,6 +574,7 @@ help:
 	@echo "... cpu-simulator"
 	@echo "... systemc"
 	@echo "... shared"
+	@echo "... module_testing_example.test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

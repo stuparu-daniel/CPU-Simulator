@@ -6,8 +6,8 @@ void rng::combinate() {
     } else {
       number_o.write(LFSR_reg.read().range(31, 0) ^ CASR_reg.read().range(31, 0));
     }
-
-    if(PRINT_RNG) {
+	
+    if(PRINT_RNG && wait_cycles <= 0) {
         cout << "\t\t------------------------" << endl;   
         cout << "\t\tRNG : number out = "<< number_o.read() << endl;
         cout << "\t\tRNG : seed = "<< seed_i.read() << endl;
@@ -15,6 +15,7 @@ void rng::combinate() {
         cout << "\t\t at CSIM " << sc_time_stamp() << endl;
         cout << "\t\t------------------------" << endl;  
     }
+	wait_cycles--;
 }
 
 void rng::LFSR() {

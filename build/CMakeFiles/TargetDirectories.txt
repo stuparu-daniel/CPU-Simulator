@@ -37,3 +37,16 @@
 /home/solo/Proiect_FIC/CPU-Simulator/build/shared/CMakeFiles/edit_cache.dir
 /home/solo/Proiect_FIC/CPU-Simulator/build/shared/CMakeFiles/install/strip.dir
 /home/solo/Proiect_FIC/CPU-Simulator/build/shared/CMakeFiles/shared.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/CMakeFiles/install/strip.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/CMakeFiles/install/local.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/CMakeFiles/install.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/CMakeFiles/list_install_components.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/CMakeFiles/rebuild_cache.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/CMakeFiles/edit_cache.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/hardware_tests/CMakeFiles/install/strip.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/hardware_tests/CMakeFiles/install/local.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/hardware_tests/CMakeFiles/edit_cache.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/hardware_tests/CMakeFiles/install.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/hardware_tests/CMakeFiles/list_install_components.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/hardware_tests/CMakeFiles/rebuild_cache.dir
+/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir

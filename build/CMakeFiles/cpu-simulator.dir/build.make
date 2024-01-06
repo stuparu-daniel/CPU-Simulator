@@ -259,8 +259,8 @@ cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/pic/pic.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/rng/rng.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/modules/stimulus/stimulus.cpp.o
 cpu-simulator: CMakeFiles/cpu-simulator.dir/build.make
-cpu-simulator: libs/systemc-2.3.3/src/libsystemc.so.2.3.3
 cpu-simulator: shared/libshared.so
+cpu-simulator: libs/systemc-2.3.3/src/libsystemc.so.2.3.3
 cpu-simulator: CMakeFiles/cpu-simulator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable cpu-simulator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpu-simulator.dir/link.txt --verbose=$(VERBOSE)

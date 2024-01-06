@@ -1,26 +1,13 @@
 cmake_minimum_required(VERSION 3.16)
-# project(shared C CXX)
 
-set (hardware_tests LANGUAGES C CXX)
+set (unit-tests LANGUAGES C CXX)
 set (CMAKE_CXX_STANDARD 17)
 
-find_package(SystemCLanguage CONFIG REQUIRED)
-
-foreach (hardware_test IN LISTS hardware_tests)
-  add_executable(dbg_pair_${hardware_test}.test pair/${hardware_test}.test.cpp)
-  target_link_libraries(dbg_pair_${hardware_test} PRIVATE hardware_test::hardware_test)
-  set_property(
-    TARGET dbg_pair_${hardware_test}
-    PROPERTY RUNTIME_OUTPUT_DIRECTORY 
-             "${CMAKE_CURRENT_BINARY_DIR}/dbg_pair_${hardware_test}"
-  )
-endforeach ()
-
-# find_package(Catch2 CONFIG REQUIRED)
-
-# target_link_libraries (shared PUBLIC SystemC::systemc)
-
-# add_library (unit-tests directive.h 
-#                     module_testing.h
-# )
-
+file(GLOB SRC_FILES "*.test.cpp")
+foreach(SRC_FILE ${SRC_FILES})
+    get_filename_component(EXEC_NAME ${SRC_FILE} NAME_WLE)
+    add_executable(${EXEC_NAME} ${SRC_FILE})
+    set_target_properties(shared PROPERTIES LINKER_LANGUAGE CXX)
+    target_link_libraries (${EXEC_NAME} PUBLIC SystemC::systemc)
+    target_link_libraries (${EXEC_NAME} PRIVATE shared)
+endforeach()

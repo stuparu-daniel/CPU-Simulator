@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_RUNNER
-#include <module_testing.h>
+#include "module_testing.h"
 
 
 /*
@@ -7,7 +7,8 @@
  * Be sure to add this to exactly one of the source files,
  * and remove #define CATCH_CONFIG_RUNNER from other files.
  */
-int main(int argc, char* argv[])
+
+int sc_main(int argc, char* argv[])
 {
     test_utils::ElaborationFactory::get().initialize_modules();
     return Catch::Session().run(argc, argv);
