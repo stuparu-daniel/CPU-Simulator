@@ -38,6 +38,11 @@
 #include "systemc.h"
 #include "directive.h"
 
+#include <cstdlib>
+#include <ctime>
+
+#define NUMBER_OF_ITERATIONS 10000
+
 struct decode : sc_module { 
   	sc_in<bool>  			resetin;      		// input reset
   	sc_in<unsigned>  		instruction;		// fetched instruction
@@ -58,6 +63,7 @@ struct decode : sc_module {
   	sc_in<unsigned >  		pc;      		// program counter from IFU
   	sc_in<bool>  			pred_on;      		// branch prediction is on
 	sc_in<sc_uint<32>>      random;             // randomly generated number
+	sc_in<sc_uint<32>>      second_random;             // second randomly generated number
   	sc_out<unsigned > 		br_instruction_address; // branch invoke instruction
   	sc_out<bool>  			next_pc;      		// next pc ++ ?
   	sc_out<bool>  			branch_valid;      	// branch valid signal
@@ -90,6 +96,7 @@ struct decode : sc_module {
   //Constructor 
   SC_CTOR(decode) {
       SC_CTHREAD(entry, CLK.pos());
+	  	srand(time(0));
         FILE *fp = fopen("register.img","r");
         int size=0;
         unsigned mem_word;

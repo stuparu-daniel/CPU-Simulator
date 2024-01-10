@@ -39,6 +39,34 @@
 #include <climits>	// for definition on value 's MAX
 #include "decode.h"
 
+int polynomial(const int a, const int b, const int c, const int x) {
+        return a * x * x + b * x + c;
+}
+
+void printFloatBits(float value) {
+    // Treat the float as an unsigned int to access its bits
+    unsigned int* floatBits = (unsigned int*)&value;
+
+    // Size of float in bytes
+    int floatSize = sizeof(float);
+
+    // Size of unsigned int in bits
+    int intSize = sizeof(unsigned int) * 8;
+
+    // Iterate through each bit of the float
+    for (int i = floatSize * intSize - 1; i >= 0; --i) {
+        // Print the bit at position i
+        printf("%d", ((*floatBits) & (1 << i)) ? 1 : 0);
+
+        // Print a space for better readability
+        if (i % intSize == 0)
+            printf(" ");
+    }
+
+    // Print a newline character at the end
+    printf("\n");
+}
+
 
 
 void decode::entry()
@@ -113,7 +141,14 @@ void decode::entry()
 		if (branch_direction_tmp) {			// handle backward branch
 			label_tmp = - (0xffff - label_tmp + 1)  ;
 		}
-		//printf("opcode = %d regC = %d regA = %d regB = %d\n",opcode_tmp, regC_tmp, regA_tmp, regB_tmp);
+
+                int y0, y1, ymax;
+                int x0, x1;
+                float x_rng, y_rng, result;
+                int good_points = 0, total_points = 0;
+                float *aux1;
+                int* aux2;
+		printf("opcode = %d regC = %d regA = %d regB = %d\n",opcode_tmp, regC_tmp, regA_tmp, regB_tmp);
 		srcA_tmp = cpu_reg[regA_tmp];
 		srcB_tmp = cpu_reg[regB_tmp];
 		srcC_tmp = cpu_reg[regC_tmp];
@@ -769,6 +804,159 @@ void decode::entry()
 					decode_valid.write(false);
 					wait();
 					break;
+                        case 0xc4:      //solve_poly
+                                        cout << "\t\t\tID: R" << regC_tmp << "= solve_poly()" << endl;
+                                        cout << "\t\t\t at CSIM " << sc_time_stamp() << endl;
+                			cout << "\t\t\t-------------------------------" << endl;
+
+                                        //store length of interval of integration in R11
+                                        //src_A.write(cpu_reg[4]);
+                                        //src_B.write(cpu_reg[3]);
+					//alu_src.write(11);
+					//alu_op.write(4);	
+					//decode_valid.write(true);
+					//wait();
+					//decode_valid.write(false);
+					//wait();
+
+                                        x0 = cpu_reg[3];
+                                        x1 = cpu_reg[4];
+
+                                        y0 = polynomial(cpu_reg[0], cpu_reg[1], cpu_reg[2], cpu_reg[3]);
+                                        y1 = polynomial(cpu_reg[0], cpu_reg[1], cpu_reg[2], cpu_reg[4]);
+
+                                        ymax = (y0 > y1) ? y0 : y1;
+
+                                        for(int i = 0; i < NUMBER_OF_ITERATIONS; i++) {
+                                                x_rng = x0 + (static_cast<float>(rand()) / static_cast<double>(RAND_MAX)) * (x1 - x0);
+                                                y_rng = (static_cast<float>(rand()) / static_cast<double>(RAND_MAX)) * ymax;
+
+                                                if(polynomial(cpu_reg[0], cpu_reg[1], cpu_reg[2], x_rng) >= y_rng) {
+                                                        good_points++;
+                                                }
+                                                total_points++;
+                                        }
+
+                                        //cout << "\t\t\tApprox integral of " << cpu_reg[0] << "x^2 +" << cpu_reg[1] << "x + " << cpu_reg[2]
+                                        //<< " from " << x0 << " to " << x1 << " is " << static_cast<float>(good_points) / static_cast<float>(total_points) * ((x1 - x0) * ymax) << endl;
+                                        //cout << "Bits of result (no cast)\n";
+                                        result = static_cast<float>(good_points) / static_cast<float>(total_points) * ((x1 - x0) * ymax);
+                                        //printFloatBits(result);
+                                        //cout << "Bits of result (with cast)\n";
+                                        //printFloatBits(static_cast<signed int>(result));
+
+                                        //Evil bit manipulation >:)
+                                        //store bits directly into R6 as is
+                                        //Registers are declared as signed int so trying to assign a float directly will not work
+                                        aux1 = &result;
+                                        aux2 = &cpu_reg[6];
+                                        *aux2 = *(int*)aux1;
+
+                                        wait();
+                                        wait();
+                                        break;
+
+
+                                        //store ymax in R6
+                                        //src_A.write(ymax);
+                                        //src_B.write(0);
+					//alu_src.write(6);
+					//alu_op.write(3);	
+					//decode_valid.write(true);
+					//wait();
+					//decode_valid.write(false);
+					//wait();
+
+                                        /*for(int i = 0; i < NUMBER_OF_ITERATIONS; i++) {
+
+                                                //-----------Calculate x_rng--------------------
+
+                                                //store first rng in R9
+                                                src_A.write(random.read());
+                                                src_B.write(0);
+					        alu_src.write(9);
+					        alu_op.write(3);	
+					        decode_valid.write(true);
+					        wait();
+					        decode_valid.write(false);
+					        wait();
+
+                                                //store second rng in R10, will be needed later
+                                                src_A.write(second_random.read());
+                                                src_B.write(0);
+					        alu_src.write(10);
+					        alu_op.write(3);	
+					        decode_valid.write(true);
+					        wait();
+					        decode_valid.write(false);
+					        wait();
+
+                                                //R12 = R9 % R11 
+                                                src_A.write(cpu_reg[9]);
+                                                src_B.write(cpu_reg[11]);
+					        alu_src.write(12);
+					        alu_op.write(14);	
+					        decode_valid.write(true);
+					        wait();
+					        decode_valid.write(false);
+					        wait();
+
+                                                //R15 = R14 + R4 
+                                                src_A.write(cpu_reg[14]);
+                                                src_B.write(cpu_reg[4]);
+					        alu_src.write(15);
+					        alu_op.write(3);	
+					        decode_valid.write(true);
+					        wait();
+					        decode_valid.write(false);
+					        wait();
+
+                                                //x_rng = (float)R15
+                                                src_A.write(static_cast<float>(cpu_reg[15]));
+                                                src_B.write(static_cast<float>(0));
+					        alu_src.write(15);
+					        alu_op.write(3);	
+					        float_valid.write(true);
+                                                wait();
+                                                float_valid.write(false);
+                                                wait();
+
+                                                //-----------Calculate y_rng--------------------
+                                                
+                                                //store second rng in R16
+                                                src_A.write(second_random.read());
+                                                src_B.write(0);
+					        alu_src.write(16);
+					        alu_op.write(3);	
+					        decode_valid.write(true);
+					        wait();
+					        decode_valid.write(false);
+					        wait();
+
+                                                //R16 = R10 % R6 
+                                                src_A.write(cpu_reg[10]);
+                                                src_B.write(cpu_reg[6]);
+					        alu_src.write(12);
+					        alu_op.write(16);	
+					        decode_valid.write(true);
+					        wait();
+					        decode_valid.write(false);
+					        wait();
+
+                                                //y_rng = (float)R16
+                                                src_A.write(static_cast<float>(cpu_reg[16]));
+                                                src_B.write(static_cast<float>(0));
+					        alu_src.write(16);
+					        alu_op.write(3);	
+					        float_valid.write(true);
+                                                wait();
+                                                float_valid.write(false);
+                                                wait();
+
+
+
+                                        }
+                                        break;*/
                         case 0xff:      // QUIT
 					printf("\t\t\tID: - SHUTDOWN - ");
 					cout << "at CSIM " << sc_time_stamp() << endl;

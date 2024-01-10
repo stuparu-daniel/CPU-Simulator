@@ -152,6 +152,7 @@ int sc_main(int, char *[])
   // ID pc = program_counter
   sc_signal<bool>        pred_on("PRED_ON") ;
   // ID random = number_o
+  // ID second_random = seed_o
   sc_signal<unsigned>    branch_instruction_address("BR_INSTRUCTION_ADDRESS");
   // ID alu_dataout = dout from EXEC 
   sc_signal<signed>      dram_dataout("DRAM_DATAOUT") ;
@@ -330,7 +331,7 @@ int sc_main(int, char *[])
 		IDU << reset << instruction << pred_instruction << instruction_valid
 		<< pred_inst_valid << out_valid << destout << dout << dram_dataout
 		<< dram_rd_valid << destout << fdout << fout_valid << fdestout
-	        << branch_clear << dsp_data_valid << program_counter << pred_on << number_o
+	        << branch_clear << dsp_data_valid << program_counter << pred_on << number_o << seed_i
 		<< branch_instruction_address << next_pc << branch_valid 
 		<< branch_target_address << mem_access << mem_address << alu_op
 		<< mem_write << alu_src << reg_write << src_A << src_B << forward_A
