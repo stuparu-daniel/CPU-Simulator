@@ -104,15 +104,33 @@ struct FIXTURE_DEF(decode)
 FIXTURED_TEST_THREAD(decode, "decode Module test")
 {
 
-    WHEN("Data is written to the input port")
+    WHEN("Decode test starting ...")
     {
-        //CHECK_WRITE(FIXTURE->mod_in, value);
 
-        THEN("module writes back new value")
+        THEN("test case 0xf11")
         {
-            //REQUIRE(FIXTURE->mod_out.read() == value);
+            CHECK_WRITE(FIXTURE->instruction, 0x0f110000);
         }
         
+        THEN("test case 0xf21")
+        {
+            CHECK_WRITE(FIXTURE->instruction, 0x0f210000);
+        }
+
+        THEN("test case 0xf31")
+        {
+            CHECK_WRITE(FIXTURE->instruction, 0x0f310000);
+        }
+
+        THEN("test case 0xf24")
+        {
+            CHECK_WRITE(FIXTURE->instruction, 0xf2400000);
+        }
+
+        THEN("test case 0xf132")
+        {
+            CHECK_WRITE(FIXTURE->instruction, 0x01320000);
+        }
     }
 
 }

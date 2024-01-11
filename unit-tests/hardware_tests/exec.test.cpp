@@ -71,7 +71,7 @@ FIXTURED_TEST_THREAD(exec, "exec/alu Module test")
     const int data = 3;
     
 
-    WHEN("Data is written to the input port")
+    WHEN("exec test is starting ...")
     {
         //da valoare @ input
         CHECK_WRITE(FIXTURE->dina, 1);
@@ -85,11 +85,35 @@ FIXTURED_TEST_THREAD(exec, "exec/alu Module test")
             REQUIRE(FIXTURE->out_valid.read() == 1);
         }
         
-        CHECK_WRITE(FIXTURE->opcode, 4);
     
         THEN("substraction without carry test")
         {
+            CHECK_WRITE(FIXTURE->opcode, 4);
             REQUIRE(FIXTURE->dout.read() == 0);
+            REQUIRE(FIXTURE->out_valid.read() == 1);
+        }
+
+    
+        THEN("divide test")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 6);
+            REQUIRE(FIXTURE->dout.read() == 1);
+            REQUIRE(FIXTURE->out_valid.read() == 1);
+        }
+
+    
+        THEN("divide with 0 test")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 6);
+            CHECK_WRITE(FIXTURE->dinb, 0);
+            REQUIRE(FIXTURE->out_valid.read() == 1);
+        }
+        
+        CHECK_WRITE(FIXTURE->dinb, 1);
+        THEN("NAND test")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 7);
+            REQUIRE(FIXTURE->dout.read() == 2);
             REQUIRE(FIXTURE->out_valid.read() == 1);
         }
     }

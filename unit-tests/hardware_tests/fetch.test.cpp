@@ -44,7 +44,7 @@ struct FIXTURE_DEF(fetch)
         UUT->next_pc.bind(next_pc);
         UUT->branch_valid.bind(branch_valid);
         UUT->stall_fetch.bind(stall_fetch);
-        UUT->interrrupt.bind(interrupt);
+        UUT->interrupt.bind(interrupt);
         UUT->int_vectno.bind(int_vectno);
         UUT->bios_valid.bind(bios_valid);
         UUT->icache_valid.bind(icache_valid);

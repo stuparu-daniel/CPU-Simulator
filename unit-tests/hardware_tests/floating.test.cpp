@@ -42,15 +42,38 @@ struct FIXTURE_DEF(floating)
 FIXTURED_TEST_THREAD(floating, "floating Module test")
 {
 
-    WHEN("Data is written to the input port")
+    WHEN("floating test is starting ...")
     {
-        //CHECK_WRITE(FIXTURE->mod_in, value);
 
-        THEN("module writes back new value")
+        THEN("test for stall")
         {
-            //REQUIRE(FIXTURE->mod_out.read() == value);
+            CHECK_WRITE(FIXTURE->opcode, 0);
         }
         
+        THEN("test for default/break")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 1);
+        }
+
+        THEN("test for add")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 3);
+        }
+
+        THEN("test for sub")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 4);
+        }
+
+        THEN("test for mul")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 5);
+        }
+
+        THEN("test for vis")
+        {
+            CHECK_WRITE(FIXTURE->opcode, 6);
+        }
     }
 
 }
