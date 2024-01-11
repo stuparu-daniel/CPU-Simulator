@@ -779,14 +779,14 @@ void decode::entry()
                 			cout << "\t\t\t-------------------------------" << endl;
 
                                         //store length of interval of integration in R11
-                                        src_A.write(cpu_reg[4]);
-                                        src_B.write(cpu_reg[3]);
-					alu_src.write(11);
-					alu_op.write(4);	
-					decode_valid.write(true);
-					wait();
-					decode_valid.write(false);
-					wait();
+                                        //src_A.write(cpu_reg[4]);
+                                        //src_B.write(cpu_reg[3]);
+					//alu_src.write(11);
+					//alu_op.write(4);	
+					//decode_valid.write(true);
+					//wait();
+					//decode_valid.write(false);
+					//wait();
 
                                         x0 = cpu_reg[3];
                                         x1 = cpu_reg[4];
@@ -806,10 +806,10 @@ void decode::entry()
                                                 total_points++;
                                         }
 
-                                        //cout << "\t\t\tApprox integral of " << cpu_reg[0] << "x^2 +" << cpu_reg[1] << "x + " << cpu_reg[2]
-                                        //<< " from " << x0 << " to " << x1 << " is " << static_cast<float>(good_points) / static_cast<float>(total_points) * ((x1 - x0) * ymax) << endl;
+                                        cout << "\t\t\tApprox integral of " << cpu_reg[0] << "x^2 +" << cpu_reg[1] << "x + " << cpu_reg[2]
+                                        << " from " << x0 << " to " << x1 << " is " << static_cast<float>(good_points) / static_cast<float>(total_points) * static_cast<float>((x1 - x0) * ymax) << endl;
                                         //cout << "Bits of result (no cast)\n";
-                                        result = static_cast<float>(good_points) / static_cast<float>(total_points) * ((x1 - x0) * ymax);
+                                        result = static_cast<float>(good_points) / static_cast<float>(total_points) * static_cast<float>((x1 - x0) * ymax);
                                         //printFloatBits(result);
                                         //cout << "Bits of result (with cast)\n";
                                         //printFloatBits(static_cast<signed int>(result));

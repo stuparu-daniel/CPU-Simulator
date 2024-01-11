@@ -1,8 +1,7 @@
 ///////////////////////////////////////////////////////////////
 //	This example demonstrates a simple RISC CPU design.
 //      This is a simulation only example using Synopsys's
-//	SystemC(TM) C++ class library.  This example
-//	was tested on Solaris 2.5 using gcc.
+//	SystemC(TM) C++ class library.
 //     
 //      Several text files were used to initialize memory data
 //	bios 	= system bios data
@@ -57,13 +56,23 @@
 //note that the file Makefile.defs contains the location of the SystemC
 //class library, which might be different for you, depending on your
 //installation. Once the compilation is finished, you will find an
-//executable 'demo.x'. 
+//executable 'cpu-simulator'. 
 // 
 //The CPU example structure looks like this:
 // 
 //.____________________________________________________.
 //| Hardware Side                                      |
-//| ._______.  .________.     .___________________.    |   
+//|            .________.                              |
+//|            |        |                              |
+//|            |Stimulus|                              |
+//|            .________.                              |
+//|                 |                                  |
+//|            .____|___.                              |  
+//|            |        |                              |
+//|            |  RNG   |                              |
+//|            .________.                              |
+//|                |                                   |
+//| ._______.  .___|____.     .___________________.    |   
 //| |       |  |        |   +-|Integer Execution  |--  |
 //| | Fetch |--| Decode |---| `-------------------' |  |
 //| ._______.  .________.   | .___________________. |  |
@@ -88,18 +97,16 @@
 //| |   mmxadds  R13, R11, R11|           ^            |
 //| |   sw       R13, R0, 10  |           |            |
 //| ._________________________. _ _ _ _ _>|            |
+//|                                       |            |
+//|                                       |            |
+//| ._________________________.           |            | 
+//| | Polynomial code:        |           |            |
+//| |   1x^2+1x+1             |           .            |
+//| |   addi     R5, R5       | %script.pl    foo.asm >|
+//| |                         |      register.img      | 
+//| ._________________________. _ _ _ _ _>|            |
 //.____________________________________________________.
 // 
 // 
-//Hope this shows some concepts of using C++ for hardware modeling.
-// 
-//The materials on this directory(the "Example") are provided by Synopsys Inc.
-//as a service to its customers and may be used for informational purposes only.  
-//The work and intellectual property presented in this example is considered 
-//propriety to Synopsys Inc. Synopsys Inc.'s trademarks maybe used publicly with 
-//permission only from Synopsys Inc. Use of Synopsys's trademarks in advertising 
-//and promotion of Synopsys products requires proper acknowledgement. 
-//All other brands and names are property of their respective owners. 
-//
 ///////////////////////////////////////////////////////////////
 

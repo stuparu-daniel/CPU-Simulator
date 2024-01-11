@@ -3,8 +3,6 @@ project(cpu-simulator LANGUAGES C CXX)
 
 set (CMAKE_CXX_STANDARD 17)
 
-# TODO: Fix multiple driver issue in cpu-simulator example.
-# TODO: Fix segfault when cpu-simulator is not started from the current directory.
 add_executable (cpu-simulator main.cpp
                          modules/bios/bios.h
                          modules/bios/bios.cpp
@@ -57,20 +55,3 @@ set_target_properties(shared PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries (cpu-simulator PUBLIC SystemC::systemc)
 target_link_libraries (cpu-simulator PUBLIC Catch2)
 target_link_libraries (cpu-simulator PRIVATE shared)
-
-# set (cpu-simulator_EXTRAS
-#                       abc.asm
-#                       assembler.pl
-#                       bios.img
-#                       dcache.img
-#                       icache.img
-#                       printout.img
-#                       program.img
-#                       register.img
-#                       test.asm
-#                       test1.asm)
-
-
-# foreach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})
-#   configure_file (${CMAKE_SOURCE_DIR}/src/${cpu-simulator_EXTRA} ${CMAKE_CURRENT_BINARY_DIR}/${cpu-simulator_EXTRA} COPYONLY)
-# endforeach (cpu-simulator_EXTRAS ${cpu-simulator_EXTRA})

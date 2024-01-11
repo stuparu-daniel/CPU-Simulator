@@ -6,11 +6,6 @@
 
 #include "mmxu.h"
 
-#ifdef __SUNPRO_CC
-// Martin, fix the ios stuff!
-#define ios std::ios_base
-#endif
-
 void mmxu::entry(){
 
   int			        opcode_tmp = 0;
