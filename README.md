@@ -1,38 +1,4 @@
 ///////////////////////////////////////////////////////////////
-//  This code is written at SYNOPSYS, Inc.
-///////////////////////////////////////////////////////////////
-/***************************************************************************
- 
-   Copyright (c) 1998-1999 Synopsys, Inc.
-   ALL RIGHTS RESERVED
- 
-*****************************************************************************/
-//  Module   : README
-//  Filename : $Source: /Users/acg/CVSROOT/systemc-2.3/examples/sysc/risc_cpu/README,v $
-//  Author   : Martin Wang
-//  Revision : $Revision: 1.1.1.1 $
-//  Date     : $Date: 2006/12/15 20:20:04 $
-//  Company  : SYNOPSYS, Inc.
-//  Purpose  : This is a README file for risc_cpu using SystemC.
-//             Instruction Set Architecure defined by Martin Wang.
-//  Contact  : mwang@synopsys.com
-///////////////////////////////////////////////////////////////
-//  Modification History
-//
-//  $Log: README,v $
-//  Revision 1.1.1.1  2006/12/15 20:20:04  acg
-//  SystemC 2.3
-//
-//  Revision 1.1.1.1  2005/12/19 23:16:42  acg
-//  First check in of SystemC 2.1 into its own archive.
-//
-//  Revision 1.2  2005/04/04 00:19:37  acg
-//  Changes for directory name of sysc rather than systemc.
-//
-//  Revision 1.1.1.1  2003/10/01 21:50:43  acg
-//  Initial use of CVS.
-//
-///////////////////////////////////////////////////////////////
 //	This example demonstrates a simple RISC CPU design.
 //      This is a simulation only example using Synopsys's
 //	SystemC(TM) C++ class library.  This example

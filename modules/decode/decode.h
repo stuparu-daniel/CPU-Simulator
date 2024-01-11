@@ -1,42 +1,16 @@
 /*****************************************************************************
-
-  Licensed to Accellera Systems Initiative Inc. (Accellera) under one or
-  more contributor license agreements.  See the NOTICE file distributed
-  with this work for additional information regarding copyright ownership.
-  Accellera licenses this file to you under the Apache License, Version 2.0
-  (the "License"); you may not use this file except in compliance with the
-  License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-  implied.  See the License for the specific language governing
-  permissions and limitations under the License.
-
- *****************************************************************************/
-
-/*****************************************************************************
  
   decode.h -- Instruction Decode Unit.
- 
-  Original Author: Martin Wang, Synopsys, Inc.
- 
- *****************************************************************************/
- 
-/*****************************************************************************
- 
-  MODIFICATION LOG - modifiers, enter your name, affiliation, date and
-  changes you are making here.
- 
-      Name, Affiliation, Date:
-  Description of Modification:
- 
+
  *****************************************************************************/
  
 #include "systemc.h"
 #include "directive.h"
+
+#include <cstdlib>
+#include <ctime>
+
+#define NUMBER_OF_ITERATIONS 1
 
 struct decode : sc_module { 
   	sc_in<bool>  			resetin;      		// input reset
@@ -58,6 +32,7 @@ struct decode : sc_module {
   	sc_in<unsigned >  		pc;      		// program counter from IFU
   	sc_in<bool>  			pred_on;      		// branch prediction is on
 	sc_in<sc_uint<32>>      random;             // randomly generated number
+	sc_in<sc_uint<32>>      second_random;             // second randomly generated number
   	sc_out<unsigned > 		br_instruction_address; // branch invoke instruction
   	sc_out<bool>  			next_pc;      		// next pc ++ ?
   	sc_out<bool>  			branch_valid;      	// branch valid signal
@@ -90,6 +65,7 @@ struct decode : sc_module {
   //Constructor 
   SC_CTOR(decode) {
       SC_CTHREAD(entry, CLK.pos());
+	  	srand(time(0));
         FILE *fp = fopen("register.img","r");
         int size=0;
         unsigned mem_word;

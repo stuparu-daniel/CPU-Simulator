@@ -1,8 +1,3 @@
-/*************************************************************************/ /*!
-@Copyright      Copyright (c) Imagination Technologies Ltd. All Rights Reserved
-@License        Strictly Confidential.
-*/
-/**************************************************************************/
 #pragma once
 
 #include <functional>
@@ -274,7 +269,7 @@ private:
         {
             wait(trigger);
             // assert(UUT != nullptr, "INIT_UUT must be called from the fixture CTOR");
-            UUT->Reset();
+            // UUT->Reset();
             Reset();
             try
             {
