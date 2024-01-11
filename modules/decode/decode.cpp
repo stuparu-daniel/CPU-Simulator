@@ -1,40 +1,9 @@
 /*****************************************************************************
-
-  Licensed to Accellera Systems Initiative Inc. (Accellera) under one or
-  more contributor license agreements.  See the NOTICE file distributed
-  with this work for additional information regarding copyright ownership.
-  Accellera licenses this file to you under the Apache License, Version 2.0
-  (the "License"); you may not use this file except in compliance with the
-  License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-  implied.  See the License for the specific language governing
-  permissions and limitations under the License.
-
- *****************************************************************************/
-
-/*****************************************************************************
  
   decode.cpp  -- Instruction Decode Unit.
- 
-  Original Author: Martin Wang, Synopsys, Inc.
- 
+
  *****************************************************************************/
- 
-/*****************************************************************************
- 
-  MODIFICATION LOG - modifiers, enter your name, affiliation, date and
-  changes you are making here.
- 
-      Name, Affiliation, Date:
-  Description of Modification:
- 
- *****************************************************************************/
- 
+
 
 #include <climits>	// for definition on value 's MAX
 #include "decode.h"
@@ -810,14 +779,14 @@ void decode::entry()
                 			cout << "\t\t\t-------------------------------" << endl;
 
                                         //store length of interval of integration in R11
-                                        //src_A.write(cpu_reg[4]);
-                                        //src_B.write(cpu_reg[3]);
-					//alu_src.write(11);
-					//alu_op.write(4);	
-					//decode_valid.write(true);
-					//wait();
-					//decode_valid.write(false);
-					//wait();
+                                        src_A.write(cpu_reg[4]);
+                                        src_B.write(cpu_reg[3]);
+					alu_src.write(11);
+					alu_op.write(4);	
+					decode_valid.write(true);
+					wait();
+					decode_valid.write(false);
+					wait();
 
                                         x0 = cpu_reg[3];
                                         x1 = cpu_reg[4];
@@ -846,117 +815,115 @@ void decode::entry()
                                         //printFloatBits(static_cast<signed int>(result));
 
                                         //Evil bit manipulation >:)
-                                        //store bits directly into R6 as is
+                                        //store bits directly into R7 as is
                                         //Registers are declared as signed int so trying to assign a float directly will not work
-                                        aux1 = &result;
-                                        aux2 = &cpu_reg[6];
-                                        *aux2 = *(int*)aux1;
+                                        cpu_reg[7] = static_cast<int>(result);
 
                                         wait();
+
+
+                                        // // store ymax in R6
+                                        // src_A.write(ymax);
+                                        // src_B.write(0);
+					// alu_src.write(6);
+					// alu_op.write(3);	
+					// decode_valid.write(true);
+					// wait();
+					// decode_valid.write(false);
+					// wait();
+
+                                        // for(int i = 0; i < NUMBER_OF_ITERATIONS; i++) {
+
+                                        //         //-----------Calculate x_rng--------------------
+
+                                        //         //store first rng in R9
+                                        //         src_A.write(random.read());
+                                        //         src_B.write(0);
+					//         alu_src.write(9);
+					//         alu_op.write(3);	
+					//         decode_valid.write(true);
+					//         wait();
+					//         decode_valid.write(false);
+					//         wait();
+                                        //         wait();
+                                        //         cout<<"cpu registry 9: "<<cpu_reg[9]<<endl;
+
+                                        //         //store second rng in R10, will be needed later
+                                        //         src_A.write(second_random.read());
+                                        //         src_B.write(0);
+					//         alu_src.write(10);
+					//         alu_op.write(3);	
+					//         decode_valid.write(true);
+					//         wait();
+					//         decode_valid.write(false);
+					//         wait();
+                                        //         wait();
+                                        //         wait();
+
+                                        //         //R12 = R9 % R11 
+                                        //         src_A.write(cpu_reg[9]);
+                                        //         src_B.write(cpu_reg[11]);
+					//         alu_src.write(12);
+					//         alu_op.write(14);	
+					//         decode_valid.write(true);
+					//         wait();
+					//         decode_valid.write(false);
+					//         wait();
+
+                                        //         //R15 = R14 + R4 
+                                        //         src_A.write(cpu_reg[14]);
+                                        //         src_B.write(cpu_reg[4]);
+					//         alu_src.write(15);
+					//         alu_op.write(3);	
+					//         decode_valid.write(true);
+					//         wait();
+					//         decode_valid.write(false);
+					//         wait();
+
+                                        //         //x_rng = (float)R15
+                                        //         src_A.write(static_cast<float>(cpu_reg[15]));
+                                        //         src_B.write(static_cast<float>(0));
+					//         alu_src.write(15);
+					//         alu_op.write(3);	
+					//         float_valid.write(true);
+                                        //         wait();
+                                        //         float_valid.write(false);
+                                        //         wait();
+
+                                        //         //-----------Calculate y_rng--------------------
+                                                
+                                        //         //store second rng in R16
+                                        //         src_A.write(second_random.read());
+                                        //         src_B.write(0);
+					//         alu_src.write(16);
+					//         alu_op.write(3);	
+					//         decode_valid.write(true);
+					//         wait();
+					//         decode_valid.write(false);
+					//         wait();
+
+                                        //         //R16 = R10 % R6 
+                                        //         src_A.write(cpu_reg[10]);
+                                        //         src_B.write(cpu_reg[6]);
+					//         alu_src.write(12);
+					//         alu_op.write(16);	
+					//         decode_valid.write(true);
+					//         wait();
+					//         decode_valid.write(false);
+					//         wait();
+
+                                        //         //y_rng = (float)R16
+                                        //         src_A.write(static_cast<float>(cpu_reg[16]));
+                                        //         src_B.write(static_cast<float>(0));
+					//         alu_src.write(16);
+					//         alu_op.write(3);	
+					//         float_valid.write(true);
+                                        //         wait();
+                                        //         float_valid.write(false);
+                                        //         wait();
+                                        // }
                                         wait();
                                         break;
-
-
-                                        //store ymax in R6
-                                        //src_A.write(ymax);
-                                        //src_B.write(0);
-					//alu_src.write(6);
-					//alu_op.write(3);	
-					//decode_valid.write(true);
-					//wait();
-					//decode_valid.write(false);
-					//wait();
-
-                                        /*for(int i = 0; i < NUMBER_OF_ITERATIONS; i++) {
-
-                                                //-----------Calculate x_rng--------------------
-
-                                                //store first rng in R9
-                                                src_A.write(random.read());
-                                                src_B.write(0);
-					        alu_src.write(9);
-					        alu_op.write(3);	
-					        decode_valid.write(true);
-					        wait();
-					        decode_valid.write(false);
-					        wait();
-
-                                                //store second rng in R10, will be needed later
-                                                src_A.write(second_random.read());
-                                                src_B.write(0);
-					        alu_src.write(10);
-					        alu_op.write(3);	
-					        decode_valid.write(true);
-					        wait();
-					        decode_valid.write(false);
-					        wait();
-
-                                                //R12 = R9 % R11 
-                                                src_A.write(cpu_reg[9]);
-                                                src_B.write(cpu_reg[11]);
-					        alu_src.write(12);
-					        alu_op.write(14);	
-					        decode_valid.write(true);
-					        wait();
-					        decode_valid.write(false);
-					        wait();
-
-                                                //R15 = R14 + R4 
-                                                src_A.write(cpu_reg[14]);
-                                                src_B.write(cpu_reg[4]);
-					        alu_src.write(15);
-					        alu_op.write(3);	
-					        decode_valid.write(true);
-					        wait();
-					        decode_valid.write(false);
-					        wait();
-
-                                                //x_rng = (float)R15
-                                                src_A.write(static_cast<float>(cpu_reg[15]));
-                                                src_B.write(static_cast<float>(0));
-					        alu_src.write(15);
-					        alu_op.write(3);	
-					        float_valid.write(true);
-                                                wait();
-                                                float_valid.write(false);
-                                                wait();
-
-                                                //-----------Calculate y_rng--------------------
-                                                
-                                                //store second rng in R16
-                                                src_A.write(second_random.read());
-                                                src_B.write(0);
-					        alu_src.write(16);
-					        alu_op.write(3);	
-					        decode_valid.write(true);
-					        wait();
-					        decode_valid.write(false);
-					        wait();
-
-                                                //R16 = R10 % R6 
-                                                src_A.write(cpu_reg[10]);
-                                                src_B.write(cpu_reg[6]);
-					        alu_src.write(12);
-					        alu_op.write(16);	
-					        decode_valid.write(true);
-					        wait();
-					        decode_valid.write(false);
-					        wait();
-
-                                                //y_rng = (float)R16
-                                                src_A.write(static_cast<float>(cpu_reg[16]));
-                                                src_B.write(static_cast<float>(0));
-					        alu_src.write(16);
-					        alu_op.write(3);	
-					        float_valid.write(true);
-                                                wait();
-                                                float_valid.write(false);
-                                                wait();
-
-
-
-                                        }
-                                        break;*/
                         case 0xff:      // QUIT
 					printf("\t\t\tID: - SHUTDOWN - ");
 					cout << "at CSIM " << sc_time_stamp() << endl;

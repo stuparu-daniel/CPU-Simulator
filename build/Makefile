@@ -48,17 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< Updated upstream
-CMAKE_SOURCE_DIR = /home/dani/fic/CPU-Simulator
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dani/fic/CPU-Simulator/build
-=======
 CMAKE_SOURCE_DIR = /home/solo/Proiect_FIC/CPU-Simulator
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/solo/Proiect_FIC/CPU-Simulator/build
->>>>>>> Stashed changes
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -133,15 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< Updated upstream
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dani/fic/CPU-Simulator/build/CMakeFiles /home/dani/fic/CPU-Simulator/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dani/fic/CPU-Simulator/build/CMakeFiles 0
-=======
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles /home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFiles 0
->>>>>>> Stashed changes
 .PHONY : all
 
 # The main clean target
@@ -210,8 +197,6 @@ shared/fast:
 
 #=============================================================================
 # Target rules for targets named module_testing_example.test
-<<<<<<< Updated upstream
-=======
 
 # Build rule for target.
 module_testing_example.test: cmake_check_build_system
@@ -222,20 +207,6 @@ module_testing_example.test: cmake_check_build_system
 module_testing_example.test/fast:
 	$(MAKE) -f unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir/build
 .PHONY : module_testing_example.test/fast
-
-#=============================================================================
-# Target rules for targets named exec.test
->>>>>>> Stashed changes
-
-# Build rule for target.
-exec.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 exec.test
-.PHONY : exec.test
-
-# fast build rule for target.
-exec.test/fast:
-	$(MAKE) -f unit-tests/hardware_tests/CMakeFiles/exec.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/exec.test.dir/build
-.PHONY : exec.test/fast
 
 main.o: main.cpp.o
 
@@ -601,15 +572,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cpu-simulator"
-<<<<<<< Updated upstream
-	@echo "... module_testing_example.test"
-	@echo "... shared"
-=======
->>>>>>> Stashed changes
 	@echo "... systemc"
 	@echo "... shared"
 	@echo "... module_testing_example.test"
-	@echo "... exec.test"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

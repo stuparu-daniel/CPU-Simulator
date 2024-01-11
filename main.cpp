@@ -403,7 +403,8 @@ int sc_main(int, char *[])
 
   sc_start();
 
-  cout << "Time for simulation = " << (time(NULL) - tbuffer) << endl;
+  cout << "Time for simulation = " << sc_time_stamp() << endl;
+//   (time(NULL) - tbuffer) << endl;
 
   return 0;	/* this is necessary */
 }
