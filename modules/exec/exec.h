@@ -64,6 +64,7 @@ struct exec : sc_module {
   }
   
   void entry();
+  void Reset();
 };
 
 // EOF
