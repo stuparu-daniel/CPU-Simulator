@@ -806,8 +806,8 @@ void decode::entry()
                                                 total_points++;
                                         }
 
-                                        //cout << "\t\t\tApprox integral of " << cpu_reg[0] << "x^2 +" << cpu_reg[1] << "x + " << cpu_reg[2]
-                                        //<< " from " << x0 << " to " << x1 << " is " << static_cast<float>(good_points) / static_cast<float>(total_points) * ((x1 - x0) * ymax) << endl;
+                                        cout << "\t\t\tApprox integral of " << cpu_reg[0] << "x^2 +" << cpu_reg[1] << "x + " << cpu_reg[2]
+                                        << " from " << x0 << " to " << x1 << " is " << static_cast<float>(static_cast<float>(good_points) / static_cast<float>(total_points) * ((x1 - x0) * ymax)) << endl;
                                         //cout << "Bits of result (no cast)\n";
                                         result = static_cast<float>(good_points) / static_cast<float>(total_points) * ((x1 - x0) * ymax);
                                         //printFloatBits(result);
