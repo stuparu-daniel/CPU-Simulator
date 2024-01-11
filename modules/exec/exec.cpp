@@ -6,7 +6,7 @@
 
 #include "exec.h"
 
-void exec::Reset(){};
+
 
 void exec::entry(){
 
