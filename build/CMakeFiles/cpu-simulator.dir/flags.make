@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/bios -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/dcache -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/decode -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/exec -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/fetch -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/floating -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/icache -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/mmxu -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/paging -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/pic -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/rng -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/modules/stimulus -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/shared -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/libs/systemc-2.3.3/src -I/home/tudy/School/Year3/S1/FIC/CPU-Simulator/libs/Catch2/single_include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -g -std=gnu++17
 

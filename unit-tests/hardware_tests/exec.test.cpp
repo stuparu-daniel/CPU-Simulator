@@ -25,12 +25,12 @@ struct FIXTURE_DEF(exec)
     sc_inout<bool>        		forward_B;		// data forwarding B valid
     sc_inout<unsigned>        	dest;			// destination register number
     sc_out<bool>              	C;			// Carry bit 
-  sc_out<bool>              	V;			// Overflow bit
-  sc_out<bool>              	Z;			// Zero bit
-  sc_out<signed int>        	dout;			// output data
-  sc_out<bool>   	       	out_valid;		// output valid
-  sc_out<unsigned>        	destout;		// write to which registers?
-  //sc_in_clk 			CLK;
+    sc_out<bool>              	V;			// Overflow bit
+    sc_out<bool>              	Z;			// Zero bit
+    sc_out<signed int>        	dout;			// output data
+    sc_out<bool>   	       	out_valid;		// output valid
+    sc_out<unsigned>        	destout;		// write to which registers?
+    //sc_in_clk 			CLK;
     
 
     //constructor
@@ -73,23 +73,25 @@ FIXTURED_TEST_THREAD(exec, "exec/alu Module test")
 
     WHEN("Data is written to the input port")
     {
-        CHECK_WRITE(FIXTURE->opcode, data);//merga numa input, da valoare
+        //da valoare @ input
         CHECK_WRITE(FIXTURE->dina, 1);
         CHECK_WRITE(FIXTURE->dinb, 1);
         CHECK_WRITE(FIXTURE->in_valid, 1);
-
-        //FIXTURE->opcode.write(data);
-        //FIXTURE->dina.write(1);
-        //FIXTURE->dinb.write(1);
-        //FIXTURE->in_valid.write(1);
-
-
-        THEN("module writes back new value")
+        CHECK_WRITE(FIXTURE->opcode, data);
+        
+        THEN("addition without carry test")
         {
             REQUIRE(FIXTURE->dout.read() == 2);
             REQUIRE(FIXTURE->out_valid.read() == 1);
         }
         
+        CHECK_WRITE(FIXTURE->opcode, 4);
+    
+        THEN("substraction without carry test")
+        {
+            REQUIRE(FIXTURE->dout.read() == 0);
+            REQUIRE(FIXTURE->out_valid.read() == 1);
+        }
     }
 
 }

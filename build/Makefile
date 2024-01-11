@@ -201,6 +201,45 @@ shared/fast:
 .PHONY : shared/fast
 
 #=============================================================================
+# Target rules for targets named bios.test
+
+# Build rule for target.
+bios.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bios.test
+.PHONY : bios.test
+
+# fast build rule for target.
+bios.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/bios.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/bios.test.dir/build
+.PHONY : bios.test/fast
+
+#=============================================================================
+# Target rules for targets named dcache.test
+
+# Build rule for target.
+dcache.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dcache.test
+.PHONY : dcache.test
+
+# fast build rule for target.
+dcache.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/dcache.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/dcache.test.dir/build
+.PHONY : dcache.test/fast
+
+#=============================================================================
+# Target rules for targets named decode.test
+
+# Build rule for target.
+decode.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 decode.test
+.PHONY : decode.test
+
+# fast build rule for target.
+decode.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/decode.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/decode.test.dir/build
+.PHONY : decode.test/fast
+
+#=============================================================================
 # Target rules for targets named exec.test
 
 # Build rule for target.
@@ -214,6 +253,58 @@ exec.test/fast:
 .PHONY : exec.test/fast
 
 #=============================================================================
+# Target rules for targets named fetch.test
+
+# Build rule for target.
+fetch.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fetch.test
+.PHONY : fetch.test
+
+# fast build rule for target.
+fetch.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/fetch.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/fetch.test.dir/build
+.PHONY : fetch.test/fast
+
+#=============================================================================
+# Target rules for targets named floating.test
+
+# Build rule for target.
+floating.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 floating.test
+.PHONY : floating.test
+
+# fast build rule for target.
+floating.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/floating.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/floating.test.dir/build
+.PHONY : floating.test/fast
+
+#=============================================================================
+# Target rules for targets named icache.test
+
+# Build rule for target.
+icache.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 icache.test
+.PHONY : icache.test
+
+# fast build rule for target.
+icache.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/icache.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/icache.test.dir/build
+.PHONY : icache.test/fast
+
+#=============================================================================
+# Target rules for targets named mmxu.test
+
+# Build rule for target.
+mmxu.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mmxu.test
+.PHONY : mmxu.test
+
+# fast build rule for target.
+mmxu.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/mmxu.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/mmxu.test.dir/build
+.PHONY : mmxu.test/fast
+
+#=============================================================================
 # Target rules for targets named module_testing_example.test
 
 # Build rule for target.
@@ -225,6 +316,58 @@ module_testing_example.test: cmake_check_build_system
 module_testing_example.test/fast:
 	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/module_testing_example.test.dir/build
 .PHONY : module_testing_example.test/fast
+
+#=============================================================================
+# Target rules for targets named paging.test
+
+# Build rule for target.
+paging.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 paging.test
+.PHONY : paging.test
+
+# fast build rule for target.
+paging.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/paging.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/paging.test.dir/build
+.PHONY : paging.test/fast
+
+#=============================================================================
+# Target rules for targets named pic.test
+
+# Build rule for target.
+pic.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pic.test
+.PHONY : pic.test
+
+# fast build rule for target.
+pic.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/pic.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/pic.test.dir/build
+.PHONY : pic.test/fast
+
+#=============================================================================
+# Target rules for targets named rng.test
+
+# Build rule for target.
+rng.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rng.test
+.PHONY : rng.test
+
+# fast build rule for target.
+rng.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/rng.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/rng.test.dir/build
+.PHONY : rng.test/fast
+
+#=============================================================================
+# Target rules for targets named stimulus.test
+
+# Build rule for target.
+stimulus.test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stimulus.test
+.PHONY : stimulus.test
+
+# fast build rule for target.
+stimulus.test/fast:
+	$(MAKE) $(MAKESILENT) -f unit-tests/hardware_tests/CMakeFiles/stimulus.test.dir/build.make unit-tests/hardware_tests/CMakeFiles/stimulus.test.dir/build
+.PHONY : stimulus.test/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -550,10 +693,21 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... bios.test"
 	@echo "... cpu-simulator"
+	@echo "... dcache.test"
+	@echo "... decode.test"
 	@echo "... exec.test"
+	@echo "... fetch.test"
+	@echo "... floating.test"
+	@echo "... icache.test"
+	@echo "... mmxu.test"
 	@echo "... module_testing_example.test"
+	@echo "... paging.test"
+	@echo "... pic.test"
+	@echo "... rng.test"
 	@echo "... shared"
+	@echo "... stimulus.test"
 	@echo "... systemc"
 	@echo "... main.o"
 	@echo "... main.i"
