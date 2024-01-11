@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include <ctime>
 
-#define NUMBER_OF_ITERATIONS 1
+#define NUMBER_OF_ITERATIONS 100000
 
 struct decode : sc_module { 
   	sc_in<bool>  			resetin;      		// input reset
