@@ -542,13 +542,13 @@ gmake[1]: Leaving directory '/home/solo/Proiect_FIC/CPU-Simulator/build/CMakeFil
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
 Change Dir: /home/dani/fic/CPU-Simulator/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f7638/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f7638.dir/build.make CMakeFiles/cmTC_f7638.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_085e4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_085e4.dir/build.make CMakeFiles/cmTC_085e4.dir/build
 gmake[1]: Entering directory '/home/dani/fic/CPU-Simulator/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f7638.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f7638.dir/src.c.o -c /home/dani/fic/CPU-Simulator/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_f7638
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7638.dir/link.txt --verbose=1
-/usr/bin/cc -rdynamic CMakeFiles/cmTC_f7638.dir/src.c.o -o cmTC_f7638 
+Building C object CMakeFiles/cmTC_085e4.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_085e4.dir/src.c.o -c /home/dani/fic/CPU-Simulator/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_085e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_085e4.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_085e4.dir/src.c.o -o cmTC_085e4 
 gmake[1]: Leaving directory '/home/dani/fic/CPU-Simulator/build/CMakeFiles/CMakeTmp'
 
 

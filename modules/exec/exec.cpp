@@ -98,7 +98,6 @@ void exec::entry(){
             wait();
 			break;
 		case 14: 		// modulo
-			cout<<dina_tmp<<" % "<<dinb_tmp;
     		dout_tmp = dina_tmp % (dinb_tmp + 1);
 			wait();
 			wait();
