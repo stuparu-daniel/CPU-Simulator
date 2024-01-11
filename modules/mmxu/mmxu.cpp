@@ -7,7 +7,7 @@
 #include "mmxu.h"
 
 #ifdef __SUNPRO_CC
-// Martin, fix the ios stuff!
+
 #define ios std::ios_base
 #endif
 
