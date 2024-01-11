@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 # Install script for directory: /home/dani/fic/CPU-Simulator
+=======
+# Install script for directory: /home/solo/Proiect_FIC/CPU-Simulator
+>>>>>>> Stashed changes
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,29 +41,40 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< Updated upstream
   include("/home/dani/fic/CPU-Simulator/build/libs/systemc-2.3.3/cmake_install.cmake")
+=======
+  include("/home/solo/Proiect_FIC/CPU-Simulator/build/libs/systemc-2.3.3/cmake_install.cmake")
+>>>>>>> Stashed changes
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< Updated upstream
   include("/home/dani/fic/CPU-Simulator/build/libs/Catch2/cmake_install.cmake")
+=======
+  include("/home/solo/Proiect_FIC/CPU-Simulator/build/libs/Catch2/cmake_install.cmake")
+>>>>>>> Stashed changes
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< Updated upstream
   include("/home/dani/fic/CPU-Simulator/build/shared/cmake_install.cmake")
+=======
+  include("/home/solo/Proiect_FIC/CPU-Simulator/build/shared/cmake_install.cmake")
+>>>>>>> Stashed changes
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< Updated upstream
   include("/home/dani/fic/CPU-Simulator/build/unit-tests/cmake_install.cmake")
+=======
+  include("/home/solo/Proiect_FIC/CPU-Simulator/build/unit-tests/cmake_install.cmake")
+>>>>>>> Stashed changes
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -70,5 +85,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< Updated upstream
 file(WRITE "/home/dani/fic/CPU-Simulator/build/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/solo/Proiect_FIC/CPU-Simulator/build/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> Stashed changes
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
